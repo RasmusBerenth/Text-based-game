@@ -6,4 +6,22 @@
     <RootNamespace>Text_based_game</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Choices.txt" />
+    <None Remove="Endings.txt" />
+    <None Remove="Events.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Choices.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Endings.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Events.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

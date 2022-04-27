@@ -14,3 +14,6 @@ C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debu
 C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\Text-based-game.pdb
 C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\Text-based-game.genruntimeconfig.cache
 C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\ref\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Events.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Choices.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Endings.txt
