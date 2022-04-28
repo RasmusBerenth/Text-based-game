@@ -36,8 +36,8 @@ namespace Text_based_game
 
             //Reading files and then splitting them and puting specific parts into the appropriate classes.
             string eventsPath = File.ReadAllText("Events.txt");
-            string[] eventsText = eventsPath.Split("\n");
-            string[] eventBlocks = eventsPath.Split("\r");
+            string[] eventsText = eventsPath.Split("\n\n");
+            string[] eventBlocks = eventsText.Split("\n");
             string choicePath = File.ReadAllText("Choices.txt");
             string[] separateChoices = choicePath.Split("\n");
 
