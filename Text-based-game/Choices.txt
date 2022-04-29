@@ -1,9 +1,57 @@
 1. The main entrance
+Narrative: You start traveling towards the main entrance through the dence forest.You feel confident youve made the right decision. You gain 1 confidence. 
+Confidence alteration: +1
+Alarm level alteration: 0
+Minimum confidence: 0
+Event requirement: ""
 2. The underground tunnels
+Narrative: You start traveling towards the underground tunnel through the dence forest. You feel confident youve made the right decision. You gain 1 confidence.
+Confidence alteration: +1
+Alarm level alteration: 0
+Minimum confidence: 0
+Event requirement: ""
 3. The secret door
+Narrative: You start traveling towards the secret door through the dence forest. You feel confident youve made the right decision. You gain 1 confidence.
+Confidence alteration: +1
+Alarm level alteration: 0
+Minimum confidence: 0
+Event requirement: ""
+
 1. Look up
+Narrative: As you look up you see a deep red shape fly across the sky as you catch its eye a shiver goes down your spine lets just hope it wont remember seeing you. The experience makes you feel a bit intimidated. You lose 1 confidence and you gain 1 alarm level.
+Confidence alteration: -1
+Alarm level alteration: +1
+Minimum confidence: 0
+Event requirement: ""
 2. Hide
+Narrative: You quickly hidde in the covers of the tree. Above a dark shadow flys across the sky. You feel clever for outsmarting the dragon. You gain 1 confidence.
+Confidence alteration: +1
+Alarm level alteration: 0
+Minimum confidence: 0
+Event requirement: ""
 3. Keep walking
+Narrative: You keep walking, its probebly nothing. The dark red shadow of the dragon flys across the sky but the odds of the dragon spotting you are pretty low...right? You gain 1 alarm level.
+Confidence alteration: 0
+Alarm level alteration: +1
+Minimum confidence: 0
+Event requirement: ""
+
 1. Loot the camp
+Narrative: Sneaking up to the tent being carfull not to make any sound, you peak into tent. The tent is mostly empty with the exeption of a makeshift bed with a bag beside it. Looking in the bag you find a coin pouch and a fancy looking chalice as well as some bread with you eat. You feel more confident having found tressure this early. You gain 1 confidence.
+Confidence alteration: +1
+Alarm level alteration: 0
+Minimum confidence: 0
+Event requirement: ""
 2. Not my problem, keep walking
+Narrative: You cant afford to get destracted however on your way toward your destination you can't help but to feel like you have missed something. You lose 1 confidence.
+Confidence alteration: -1
+Alarm level alteration: 0
+Minimum confidence: 0
+Event requirement: ""
 3. Take a break
+Narrative: You decide to take a break and take a seat by the fireplace. You end up falling asleep in the sun and its sundown by the time you wake up. Time to continue. Your lose 1 alarm level.
+Confidence alteration: 0
+Alarm level alteration: -1
+Minimum confidence: 0
+Event requirement: ""
+
