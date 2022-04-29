@@ -66,8 +66,7 @@ namespace Text_based_game
             //Using regex to find individual items in the choice file.
             Match choiceInfo = Regex.Match(choicesGroup[0], "\\d\\.(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)");
 
-            //Convert string (error) into int.
-            Convert.ToInt32(choiceInfo.Groups[3].Value);
+            //Convert numerical string into int.
             int intConfidenceAlteration = Int32.Parse(choiceInfo.Groups[3].Value);
             int intAlarmLevelAlteration = Int32.Parse(choiceInfo.Groups[4].Value);
             int intMinimumConfidence = Int32.Parse(choiceInfo.Groups[5].Value);
@@ -85,7 +84,6 @@ namespace Text_based_game
             Console.Clear();
             Console.WriteLine($"Confidence:{confidence} Alarm Level:{alarmLevel}\n");
             Console.WriteLine(newEvent.Narration);
-            Console.WriteLine(choices.Narration);
 
             //Creating loops (3, 1 foreach with 2 indented loops for events and choices).
 
