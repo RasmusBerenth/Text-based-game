@@ -37,57 +37,68 @@ namespace Text_based_game
             //List of choices in individual events.
             var eventChoices = new List<Choice>();
 
-            //Reading events file and then splitting it.
+            //Reading files and then splitting them.
             string eventsPath = "Events.txt";
             string eventsText = File.ReadAllText(eventsPath);
             string[] eventGroups = eventsText.Split("\r\n\r");
 
             string choicesPath = "Choices.txt";
             string choicesText = File.ReadAllText(choicesPath);
-            string[] choicesGroup = choicesText.Split("\n\r");
+            string[] choicesGroup = choicesText.Split("\n\r\n");
 
             //Game intro.
             Console.WriteLine("A lone thief has set up camp in a forest. Less than a day away has a dragon made its lair.\nThe thief has gathered what confidence they could find and has made it this far...\nWill their confidence grow or fallter? Will the dragon spot them or will they go unseen...\nOnly time will tell...");
             Console.WriteLine("\nPress any button to commence with the theft.");
-            Console.ReadLine();
+            input = Console.ReadLine();
 
-            //Using regex to find individual items in the events file.
-            Match eventName = Regex.Match(eventGroups[0], "Name: (.*)\\n");
-            Match eventNarration = Regex.Match(eventGroups[0], "Narration: (.*)\\n");
-            Match eventSpecialItem = Regex.Match(eventGroups[0], "Special item: (.*)\\n");
+            int e = 0;
+            int c = 0;
 
-            //Event class definition
-            var newEvent = new Event();
-            newEvent.Name = eventName.Groups[1].Value;
-            newEvent.Narration = eventNarration.Groups[1].Value;
-            newEvent.SpecialItem = eventSpecialItem.Groups[1].Value;
-            newEvent.Choices = eventChoices;
+            foreach (string events in eventGroups)
+            {
 
-            //Using regex to find individual items in the choice file.
-            Match choiceInfo = Regex.Match(choicesGroup[0], "\\d\\.(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)");
+                //Using regex to find individual items in the events file.
+                Match eventInfo = Regex.Match(eventGroups[e], ".*:(.*)\\n.*:(.*)\\n.*:(.*)");
 
-            //Convert numerical string into int.
-            int intConfidenceAlteration = Int32.Parse(choiceInfo.Groups[3].Value);
-            int intAlarmLevelAlteration = Int32.Parse(choiceInfo.Groups[4].Value);
-            int intMinimumConfidence = Int32.Parse(choiceInfo.Groups[5].Value);
+                //Using regex to find individual items in the choice file.
+                Match choiceInfo = Regex.Match(choicesGroup[c], "(\\d\\..*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)");
 
-            //Choice class definition
-            var choices = new Choice();
-            choices.Name = choiceInfo.Groups[1].Value;
-            choices.Narration = choiceInfo.Groups[2].Value;
-            choices.ConfidenceAlteration = intConfidenceAlteration;
-            choices.AlarmLevelAlteration = intAlarmLevelAlteration;
-            choices.MinimumConfidence = intMinimumConfidence;
-            choices.EventRequirement = choiceInfo.Groups[6].Value;
+                //Convert numerical string into int.
+                int intConfidenceAlteration = Int32.Parse(choiceInfo.Groups[3].Value);
+                int intAlarmLevelAlteration = Int32.Parse(choiceInfo.Groups[4].Value);
+                int intMinimumConfidence = Int32.Parse(choiceInfo.Groups[5].Value);
 
-            //Clearing previous text and output UI.
-            Console.Clear();
-            Console.WriteLine($"Confidence:{confidence} Alarm Level:{alarmLevel}\n");
-            Console.WriteLine(newEvent.Narration);
+                //Choice class definition
+                var choices = new Choice();
+                choices.Name = choiceInfo.Groups[1].Value;
+                choices.Narration = choiceInfo.Groups[2].Value;
+                choices.ConfidenceAlteration = intConfidenceAlteration;
+                choices.AlarmLevelAlteration = intAlarmLevelAlteration;
+                choices.MinimumConfidence = intMinimumConfidence;
+                choices.EventRequirement = choiceInfo.Groups[6].Value;
 
-            //Creating loops (3, 1 foreach with 2 indented loops for events and choices).
+                //Event class definition
+                var newEvent = new Event();
+                newEvent.Name = eventInfo.Groups[1].Value;
+                newEvent.Narration = eventInfo.Groups[2].Value;
+                newEvent.SpecialItem = eventInfo.Groups[3].Value;
 
-            choosenEntrance = Console.ReadLine();
+                foreach (string choice in choicesGroup)
+                {
+                    eventChoices.Add(choices);
+                }
+
+                //Clearing previous text and output UI.
+                Console.Clear();
+                Console.WriteLine($"Confidence:{confidence} Alarm Level:{alarmLevel}\n");
+                Console.WriteLine(newEvent.Narration);
+                Console.WriteLine(eventChoices);
+
+                choosenEntrance = Console.ReadLine();
+                e++;
+                c++;
+
+            }
 
         }
     }
