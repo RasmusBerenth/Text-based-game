@@ -27,7 +27,6 @@ namespace Text_based_game
         {
             int confidence = 1;
             int alarmLevel = 0;
-            string choosenEntrance;
             string input;
 
             //List of events the player has cleared.
@@ -44,7 +43,7 @@ namespace Text_based_game
 
             string choicesPath = "Choices.txt";
             string choicesText = File.ReadAllText(choicesPath);
-            string[] choicesGroup = choicesText.Split("\n\r\n");
+            string[] choiceGroups = choicesText.Split("\r\n\r\n\r\n");
 
             //Game intro.
             Console.WriteLine("A lone thief has set up camp in a forest. Less than a day away has a dragon made its lair.\nThe thief has gathered what confidence they could find and has made it this far...\nWill their confidence grow or fallter? Will the dragon spot them or will they go unseen...\nOnly time will tell...");
@@ -56,19 +55,19 @@ namespace Text_based_game
 
             foreach (string events in eventGroups)
             {
-
                 //Using regex to find individual items in the events file.
                 Match eventInfo = Regex.Match(eventGroups[e], ".*:(.*)\\n.*:(.*)\\n.*:(.*)");
 
                 //Using regex to find individual items in the choice file.
-                Match choiceInfo = Regex.Match(choicesGroup[c], "(\\d\\..*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)");
+                string[] choicesPerEvent = choiceGroups[c].Split("\r\n\r");
+                Match choiceInfo = Regex.Match(choicesPerEvent[c], "(\\d\\..*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)?");
 
                 //Convert numerical string into int.
                 int intConfidenceAlteration = Int32.Parse(choiceInfo.Groups[3].Value);
                 int intAlarmLevelAlteration = Int32.Parse(choiceInfo.Groups[4].Value);
                 int intMinimumConfidence = Int32.Parse(choiceInfo.Groups[5].Value);
 
-                //Choice class definition
+                //Choice class definition.
                 var choices = new Choice();
                 choices.Name = choiceInfo.Groups[1].Value;
                 choices.Narration = choiceInfo.Groups[2].Value;
@@ -77,27 +76,47 @@ namespace Text_based_game
                 choices.MinimumConfidence = intMinimumConfidence;
                 choices.EventRequirement = choiceInfo.Groups[6].Value;
 
-                //Event class definition
+                //Adding choices into a list that goes to event class.
+                foreach (string choice in choicesPerEvent)
+                {
+                    eventChoices.Add(choices);
+                }
+
+                //Event class definition.
                 var newEvent = new Event();
                 newEvent.Name = eventInfo.Groups[1].Value;
                 newEvent.Narration = eventInfo.Groups[2].Value;
                 newEvent.SpecialItem = eventInfo.Groups[3].Value;
-
-                foreach (string choice in choicesGroup)
-                {
-                    eventChoices.Add(choices);
-                }
+                newEvent.Choices = eventChoices;
 
                 //Clearing previous text and output UI.
                 Console.Clear();
                 Console.WriteLine($"Confidence:{confidence} Alarm Level:{alarmLevel}\n");
                 Console.WriteLine(newEvent.Narration);
-                Console.WriteLine(eventChoices);
+                foreach (Choice choice in newEvent.Choices)
+                {
+                    Console.WriteLine(choices.Name);
 
-                choosenEntrance = Console.ReadLine();
+                }
+                confidence += choices.ConfidenceAlteration;
+                alarmLevel += choices.AlarmLevelAlteration;
+
+                do
+                {
+                    input = Console.ReadLine();
+                    if (Regex.IsMatch(input, "[1-3]"))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("That isen't an option... Try again!");
+                    }
+                } while (true);
+
+                eventChoices.Clear();
                 e++;
                 c++;
-
             }
 
         }
