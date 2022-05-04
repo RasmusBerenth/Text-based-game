@@ -129,8 +129,12 @@ namespace Text_based_game
                 }
 
                 eventChoices.Clear();
+                storyline.Add(newEvent);
                 e++;
                 c++;
+
+
+
 
             } while (e < 3);
 
