@@ -23,6 +23,10 @@ namespace Text_based_game
     }
     internal class Program
     {
+        //static bool checkConditions(string specialItem, int confidence, int alarmLevel, List<Event>storyline)
+        //{
+
+        //}
         static void Main(string[] args)
         {
             int confidence = 1;
@@ -53,33 +57,39 @@ namespace Text_based_game
             int e = 0;
             int c = 0;
 
-            foreach (string events in eventGroups)
+            do
             {
                 //Using regex to find individual items in the events file.
                 Match eventInfo = Regex.Match(eventGroups[e], ".*:(.*)\\n.*:(.*)\\n.*:(.*)");
 
                 //Using regex to find individual items in the choice file.
+
                 string[] choicesPerEvent = choiceGroups[c].Split("\r\n\r");
-                Match choiceInfo = Regex.Match(choicesPerEvent[c], "(\\d\\..*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)?");
+                string choicesPerEventString = String.Concat(choicesPerEvent);
 
-                //Convert numerical string into int.
-                int intConfidenceAlteration = Int32.Parse(choiceInfo.Groups[3].Value);
-                int intAlarmLevelAlteration = Int32.Parse(choiceInfo.Groups[4].Value);
-                int intMinimumConfidence = Int32.Parse(choiceInfo.Groups[5].Value);
+                MatchCollection choiceInfoCollection = Regex.Matches(choicesPerEventString, "(\\d\\..*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)?");
 
-                //Choice class definition.
-                var choices = new Choice();
-                choices.Name = choiceInfo.Groups[1].Value;
-                choices.Narration = choiceInfo.Groups[2].Value;
-                choices.ConfidenceAlteration = intConfidenceAlteration;
-                choices.AlarmLevelAlteration = intAlarmLevelAlteration;
-                choices.MinimumConfidence = intMinimumConfidence;
-                choices.EventRequirement = choiceInfo.Groups[6].Value;
 
-                //Adding choices into a list that goes to event class.
-                foreach (string choice in choicesPerEvent)
+                foreach (Match choiceInfo in choiceInfoCollection)
                 {
-                    eventChoices.Add(choices);
+                    GroupCollection group = choiceInfo.Groups;
+
+                    //Convert numerical string into int.
+                    int intConfidenceAlteration = Int32.Parse(choiceInfo.Groups[3].Value);
+                    int intAlarmLevelAlteration = Int32.Parse(choiceInfo.Groups[4].Value);
+                    int intMinimumConfidence = Int32.Parse(choiceInfo.Groups[5].Value);
+
+                    //Choice class definition.
+                    var choice = new Choice();
+                    choice.Name = choiceInfo.Groups[1].Value;
+                    choice.Narration = choiceInfo.Groups[2].Value;
+                    choice.ConfidenceAlteration = intConfidenceAlteration;
+                    choice.AlarmLevelAlteration = intAlarmLevelAlteration;
+                    choice.MinimumConfidence = intMinimumConfidence;
+                    choice.EventRequirement = choiceInfo.Groups[6].Value;
+
+                    //Adding choices into a list that goes to event class.
+                    eventChoices.Add(choice);
                 }
 
                 //Event class definition.
@@ -93,13 +103,11 @@ namespace Text_based_game
                 Console.Clear();
                 Console.WriteLine($"Confidence:{confidence} Alarm Level:{alarmLevel}\n");
                 Console.WriteLine(newEvent.Narration);
-                foreach (Choice choice in newEvent.Choices)
+                foreach (Choice choice in eventChoices)
                 {
-                    Console.WriteLine(choices.Name);
-
+                    Console.WriteLine(choice.Name);
                 }
-                confidence += choices.ConfidenceAlteration;
-                alarmLevel += choices.AlarmLevelAlteration;
+
 
                 do
                 {
@@ -112,12 +120,19 @@ namespace Text_based_game
                     {
                         Console.WriteLine("That isen't an option... Try again!");
                     }
+
                 } while (true);
+
+                if (Regex.IsMatch(newEvent.Name, "Knights camp") && (input == "1"))
+                {
+                    inventory.Add(newEvent.SpecialItem);
+                }
 
                 eventChoices.Clear();
                 e++;
                 c++;
-            }
+
+            } while (e < 3);
 
         }
     }
