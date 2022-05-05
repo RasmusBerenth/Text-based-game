@@ -31,7 +31,7 @@ namespace Text_based_game
         {
             int confidence = 1;
             int alarmLevel = 0;
-            string input;
+            string userInput;
 
             //List of events the player has cleared.
             var storyline = new List<Event>();
@@ -52,7 +52,7 @@ namespace Text_based_game
             //Game intro.
             Console.WriteLine("A lone thief has set up camp in a forest. Less than a day away has a dragon made its lair.\nThe thief has gathered what confidence they could find and has made it this far...\nWill their confidence grow or fallter? Will the dragon spot them or will they go unseen...\nOnly time will tell...");
             Console.WriteLine("\nPress any button to commence with the theft.");
-            input = Console.ReadLine();
+            userInput = Console.ReadLine();
 
             int e = 0;
             int c = 0;
@@ -68,7 +68,6 @@ namespace Text_based_game
                 string choicesPerEventString = String.Concat(choicesPerEvent);
 
                 MatchCollection choiceInfoCollection = Regex.Matches(choicesPerEventString, "(\\d\\..*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)?");
-
 
                 foreach (Match choiceInfo in choiceInfoCollection)
                 {
@@ -108,22 +107,26 @@ namespace Text_based_game
                     Console.WriteLine(choice.Name);
                 }
 
+                List<Choice> choices = eventChoices;
+
 
                 do
                 {
-                    input = Console.ReadLine();
-                    if (Regex.IsMatch(input, "[1-3]"))
+                    userInput = Console.ReadLine();
+                    Match chosenInput = Regex.Match(userInput, "[1-3]");
+                    if (chosenInput.Success)
                     {
                         break;
                     }
                     else
                     {
-                        Console.WriteLine("That isen't an option... Try again!");
+                        Console.WriteLine("That is not an option. Try again!");
                     }
 
                 } while (true);
 
-                if (Regex.IsMatch(newEvent.Name, "Knights camp") && (input == "1"))
+
+                if (Regex.IsMatch(newEvent.Name, "Knights camp") && (userInput == "1"))
                 {
                     inventory.Add(newEvent.SpecialItem);
                 }
@@ -132,8 +135,6 @@ namespace Text_based_game
                 storyline.Add(newEvent);
                 e++;
                 c++;
-
-
 
 
             } while (e < 3);
