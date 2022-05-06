@@ -109,22 +109,31 @@ namespace Text_based_game
 
                 List<Choice> choices = eventChoices;
 
-
-                do
+                foreach (Choice choice in choices)
                 {
-                    userInput = Console.ReadLine();
-                    Match chosenInput = Regex.Match(userInput, "[1-3]");
-                    if (chosenInput.Success)
+                    do
                     {
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("That is not an option. Try again!");
-                    }
+                        userInput = Console.ReadLine();
 
-                } while (true);
+                        if (Regex.IsMatch(userInput, "[1-3]"))
+                        {
+                            Console.WriteLine(choice.Narration);
 
+                            confidence += choice.ConfidenceAlteration;
+                            alarmLevel += choice.AlarmLevelAlteration;
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("That is not an option. Try again!");
+                            break;
+
+                        }
+
+                    } while (true);
+
+                    break;
+                }
 
                 if (Regex.IsMatch(newEvent.Name, "Knights camp") && (userInput == "1"))
                 {
