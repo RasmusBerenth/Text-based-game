@@ -23,10 +23,36 @@ namespace Text_based_game
     }
     internal class Program
     {
-        //static bool checkConditions(string specialItem, int confidence, int alarmLevel, List<Event>storyline)
-        //{
+        static bool checkConditions(int confidence, Choice minimumConfidence, int alarmLevel, List<Event> storyline, Event eventName, List<string> inventory, string item)
+        {
 
-        //}
+
+            if (Regex.IsMatch(minimumConfidence, confidence))
+            {
+                return true;
+            }
+            else if (alarmLevel == 6)
+            {
+                return true;
+            }
+            else if (alarmLevel == 5)
+            {
+                return true;
+            }
+            else if (storyline.Contains(eventName))
+            {
+                return true;
+            }
+            else if (inventory.Contains(item))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
         static void Main(string[] args)
         {
             int confidence = 1;
@@ -107,44 +133,46 @@ namespace Text_based_game
                     Console.WriteLine(choice.Name);
                 }
 
-                List<Choice> choices = eventChoices;
-
-                foreach (Choice choice in choices)
+                //Selects a choice based on the players input.
+                do
                 {
-                    do
+                    userInput = Console.ReadLine();
+
+                    if (Regex.IsMatch(userInput, "\\d"))
                     {
-                        userInput = Console.ReadLine();
-
-                        if (Regex.IsMatch(userInput, "[1-3]"))
+                        try
                         {
-                            Console.WriteLine(choice.Narration);
+                            int userInputInt = int.Parse(userInput);
+                            Console.WriteLine(eventChoices[userInputInt - 1].Narration);
 
-                            confidence += choice.ConfidenceAlteration;
-                            alarmLevel += choice.AlarmLevelAlteration;
+                            confidence += eventChoices[userInputInt - 1].ConfidenceAlteration;
+                            alarmLevel += eventChoices[userInputInt - 1].AlarmLevelAlteration;
+                            Console.ReadLine();
                             break;
                         }
-                        else
+                        catch (ArgumentOutOfRangeException)
                         {
-                            Console.WriteLine("That is not an option. Try again!");
-                            break;
-
+                            Console.WriteLine("Try one of listed numbers.");
                         }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{userInput} is not an option. Try again!");
+                    }
 
-                    } while (true);
+                } while (true);
 
-                    break;
-                }
-
+                //Adds found item to inventory.
                 if (Regex.IsMatch(newEvent.Name, "Knights camp") && (userInput == "1"))
                 {
                     inventory.Add(newEvent.SpecialItem);
                 }
 
+                //Moves to next event.
                 eventChoices.Clear();
                 storyline.Add(newEvent);
                 e++;
                 c++;
-
 
             } while (e < 3);
 
