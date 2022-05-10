@@ -23,6 +23,7 @@ namespace Text_based_game
     }
     internal class Program
     {
+        //Checks conditions for choices, endings and rules.
         static bool checkConditions(int confidence, Choice minimumConfidence, int alarmLevel, List<Event> storyline, Event eventName, List<string> inventory, string item)
         {
 
