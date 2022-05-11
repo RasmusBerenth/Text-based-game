@@ -3,6 +3,7 @@ Narrative: You start traveling towards the main entrance through the dence fores
 Confidence alteration: +1
 Alarm level alteration: 0
 Minimum confidence: 0
+Special item requirement:
 Event requirement:
 
 2. The underground tunnels
@@ -10,6 +11,7 @@ Narrative: You start traveling towards the underground tunnel through the dence 
 Confidence alteration: +1
 Alarm level alteration: 0
 Minimum confidence: 0
+Special item requirement:
 Event requirement:
 
 3. The secret door
@@ -17,6 +19,7 @@ Narrative: You start traveling towards the secret door through the dence forest.
 Confidence alteration: +1
 Alarm level alteration: 0
 Minimum confidence: 0
+Special item requirement:
 Event requirement:
 
 
@@ -25,6 +28,7 @@ Narrative: As you look up you see a deep red shape fly across the sky as you cat
 Confidence alteration: -1
 Alarm level alteration: +1
 Minimum confidence: 0
+Special item requirement:
 Event requirement:
 
 2. Hide
@@ -32,6 +36,7 @@ Narrative: You quickly hidde in the covers of the tree. Above a dark shadow flys
 Confidence alteration: +1
 Alarm level alteration: 0
 Minimum confidence: 0
+Special item requirement:
 Event requirement:
 
 3. Keep walking
@@ -39,6 +44,7 @@ Narrative: You keep walking, its probebly nothing. The dark red shadow of the dr
 Confidence alteration: 0
 Alarm level alteration: +1
 Minimum confidence: 0
+Special item requirement:
 Event requirement:
 
 
@@ -47,6 +53,7 @@ Narrative: Sneaking up to the tent being carfull not to make any sound, you peak
 Confidence alteration: +1
 Alarm level alteration: 0
 Minimum confidence: 0
+Special item requirement:
 Event requirement:
 
 2. Not my problem, keep walking
@@ -54,6 +61,7 @@ Narrative: You cant afford to get destracted however on your way toward your des
 Confidence alteration: -1
 Alarm level alteration: 0
 Minimum confidence: 0
+Special item requirement:
 Event requirement:
 
 3. Take a break
@@ -61,4 +69,5 @@ Narrative: You decide to take a break and take a seat by the fireplace. You end 
 Confidence alteration: 0
 Alarm level alteration: -1
 Minimum confidence: 0
+Special item requirement:
 Event requirement:

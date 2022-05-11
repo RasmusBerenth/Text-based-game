@@ -17,48 +17,49 @@ namespace Text_based_game
         public int MinimumConfidence;
         public int ConfidenceAlteration;
         public int AlarmLevelAlteration;
-        public string EventRequirement;
+        public Event EventRequirement;
+        public string SpecialItemRequirement;
         public string Narration;
         public string Name;
+    }
+    [Flags]
+    public enum ConditionCheck
+    {
+        None = 0,
+        Confidence = 1,
+        Alarm = 2,
+        Death = 4,
+        Story = 8,
+        Inventory = 16,
     }
     internal class Program
     {
         //Checks conditions for choices, endings and rules.
-        static bool checkConditions(int confidence, Choice minimumConfidence, int alarmLevel, List<Event> storyline, Event eventName, List<string> inventory, string item)
+        static bool isChoicePosible(Choice choice, int confidence, List<Event> storyline, List<string> inventory)
         {
-
-
-            if (Regex.IsMatch(minimumConfidence, confidence))
-            {
-                return true;
-            }
-            else if (alarmLevel == 6)
-            {
-                return true;
-            }
-            else if (alarmLevel == 5)
-            {
-                return true;
-            }
-            else if (storyline.Contains(eventName))
-            {
-                return true;
-            }
-            else if (inventory.Contains(item))
-            {
-                return true;
-            }
-            else
+            if (confidence < choice.MinimumConfidence)
             {
                 return false;
             }
 
+            if (choice.EventRequirement != null && !storyline.Contains(choice.EventRequirement))
+            {
+                return false;
+            }
+
+            if (choice.SpecialItemRequirement != null && !inventory.Contains(choice.SpecialItemRequirement))
+            {
+                return false;
+            }
+
+            return true;
         }
         static void Main(string[] args)
         {
             int confidence = 1;
             int alarmLevel = 0;
             string userInput;
+            int userInputInt;
 
             //List of events the player has cleared.
             var storyline = new List<Event>();
@@ -94,7 +95,7 @@ namespace Text_based_game
                 string[] choicesPerEvent = choiceGroups[c].Split("\r\n\r");
                 string choicesPerEventString = String.Concat(choicesPerEvent);
 
-                MatchCollection choiceInfoCollection = Regex.Matches(choicesPerEventString, "(\\d\\..*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)?");
+                MatchCollection choiceInfoCollection = Regex.Matches(choicesPerEventString, "(\\d\\..*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)\\n.*:(.*)");
 
                 foreach (Match choiceInfo in choiceInfoCollection)
                 {
@@ -112,7 +113,8 @@ namespace Text_based_game
                     choice.ConfidenceAlteration = intConfidenceAlteration;
                     choice.AlarmLevelAlteration = intAlarmLevelAlteration;
                     choice.MinimumConfidence = intMinimumConfidence;
-                    choice.EventRequirement = choiceInfo.Groups[6].Value;
+                    choice.SpecialItemRequirement = choiceInfo.Groups[6].Value;
+                    choice.EventRequirement = choiceInfo.Groups[7].Value;
 
                     //Adding choices into a list that goes to event class.
                     eventChoices.Add(choice);
@@ -143,7 +145,7 @@ namespace Text_based_game
                     {
                         try
                         {
-                            int userInputInt = int.Parse(userInput);
+                            userInputInt = int.Parse(userInput);
                             Console.WriteLine(eventChoices[userInputInt - 1].Narration);
 
                             confidence += eventChoices[userInputInt - 1].ConfidenceAlteration;
@@ -174,6 +176,7 @@ namespace Text_based_game
                 storyline.Add(newEvent);
                 e++;
                 c++;
+
 
             } while (e < 3);
 
