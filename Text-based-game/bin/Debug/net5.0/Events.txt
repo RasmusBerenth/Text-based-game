@@ -1,11 +1,17 @@
 Name: Select entrance
-Narration:Having searched the area earlier, you have discovered three ways into the dragon's lair. Now it's time to choose one and cross your fingers that you pick the best one.
-Special item:
+Narration: Having searched the area earlier, you have discovered three ways into the dragon's lair. Now it's time to choose one and cross your fingers that you pick the best one.
 
 Name: Dragon sighting
-Narration:As you are heading towards the entrance, you feel a wind current flowing through the forest. What do you do?
-Special item:
+Narration: As you are heading towards the entrance, you feel a wind current flowing through the forest. What do you do?
 
 Name: Knights camp
-Narration:As you press on you see glimpses of colors not familiar to the forest. As you sneak forward, hiding in the undergrowth. In the clearing, a blue and orange tent has been set up with a fireplace in front which seems to have burnt out a while ago. What do you do? 
-Special item: Gold coins and a chalice
+Narration: As you press on you see glimpses of colors not familiar to the forest. As you sneak forward, hiding in the undergrowth. In the clearing, a blue and orange tent has been set up with a fireplace in front which seems to have burnt out a while ago. What do you do? 
+
+Name: The main entrance
+Narration: m
+
+Name: The underground tunnel
+Narration: u
+
+Name: The secret door
+Narration: s

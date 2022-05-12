@@ -1,0 +1,87 @@
+Name: Dragon fodder
+Narration: something
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 6
+Event requirement: 
+
+Name: A cunning thief
+Narration: something
+Maximum confidence: 
+Minimum confidence: 5
+Maximum alarm level: 0
+Minimum alarm level: 
+Event requirement: 
+
+Name: Lucky break
+Narration: something
+Maximum confidence: 0
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 5
+Event requirement: 
+
+Name: Flying by the seat of your pants
+Narration: something
+Maximum confidence: 
+Minimum confidence: 5
+Maximum alarm level: 
+Minimum alarm level: 5
+Event requirement: 
+
+Name: How am I alive?
+Narration: something
+Maximum confidence: 0
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 5
+Event requirement: 
+
+Name: Die a hero
+Narration: something
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 6
+Event requirement: Help knight
+
+Name: Helper and theif
+Narration: something
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 
+Event requirement: Help knight, Escape via secret door
+
+Name: Dragonslayer
+Narration: something
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 
+Event requirement: Help knight, Fight dragon
+
+Name: Live long enought the see yourself become the villian
+Narration: something
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 
+Event requirement: Help knight, Escape
+
+Name: Narrow escape
+Narration: something
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 
+Event requirement: Give gold to the trolls
+
+Name: Rags to riches
+Narration: something
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 
+Event requirement: 
