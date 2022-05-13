@@ -12,7 +12,7 @@ Maximum confidence:
 Minimum confidence: 5
 Maximum alarm level: 0
 Minimum alarm level: 
-Event requirement: 
+Event requirement: Escape
 
 Name: Lucky break
 Narration: something
@@ -20,7 +20,7 @@ Maximum confidence: 0
 Minimum confidence: 
 Maximum alarm level: 
 Minimum alarm level: 5
-Event requirement: 
+Event requirement: Escape
 
 Name: Flying by the seat of your pants
 Narration: something
@@ -28,7 +28,7 @@ Maximum confidence:
 Minimum confidence: 5
 Maximum alarm level: 
 Minimum alarm level: 5
-Event requirement: 
+Event requirement: Escape
 
 Name: How am I alive?
 Narration: something
@@ -36,7 +36,7 @@ Maximum confidence: 0
 Minimum confidence: 
 Maximum alarm level: 
 Minimum alarm level: 5
-Event requirement: 
+Event requirement: Escape
 
 Name: Die a hero
 Narration: something
@@ -84,4 +84,4 @@ Maximum confidence:
 Minimum confidence: 
 Maximum alarm level: 
 Minimum alarm level: 
-Event requirement: 
+Event requirement: Escape

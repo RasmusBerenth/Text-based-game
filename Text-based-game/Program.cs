@@ -9,9 +9,9 @@ namespace Text_based_game
     {
         public string Name;
         public string Narration;
-        public Event EventRequirement;
-        public int MaxConfidence;
+        public string EventRequirement;
         public int MinConfidence;
+        public int MaxConfidence;
         public int MinAlarmLevel;
         public int MaxAlarmLevel;
     }
@@ -41,15 +41,72 @@ namespace Text_based_game
         Alarm = 2,
         Death = 4,
         Story = 8,
-        Inventory = 16,
     }
     internal class Program
     {
         static List<Event> events = new List<Event>();
 
         //A method which checks if the game is over and the ending the player got if the game is over.
-        static End handleEndings(int confidence, int alarmLevel)
+        static End HandleEndings(int confidence, int alarmLevel, List<string> storyline)
         {
+            string endPath = "Endings.txt";
+            string endText = File.ReadAllText(endPath);
+            string[] endGroups = endText.Split("\r\n\r\n");
+
+            End end = new End();
+            List<End> endings = new List<End>();
+
+            foreach (string ending in endGroups)
+            {
+                Match endNameInfo = Regex.Match(endText, "Name:([\\r]*)");
+                if (endNameInfo.Success)
+                {
+                    end.Name = endNameInfo.Groups[1].Value;
+                }
+
+                Match endNarrationInfo = Regex.Match(endText, "Narration:([\\r]*)");
+                if (endNarrationInfo.Success)
+                {
+                    end.Narration = endNarrationInfo.Groups[1].Value;
+                }
+
+                Match endEventRequirementInfo = Regex.Match(endText, "Event requirement:([\\r]*)");
+                if (endEventRequirementInfo.Success)
+                {
+
+                    end.EventRequirement = endEventRequirementInfo.Groups[1].Value;
+                }
+
+                Match endMinConfidenceInfo = Regex.Match(endText, "Minimum confidence:([\\r]*)");
+                if (endMinConfidenceInfo.Success)
+                {
+                    int intEndMinConfidenceInfo = Int32.Parse(endMinConfidenceInfo.Groups[1].Value);
+                    end.MinConfidence = intEndMinConfidenceInfo;
+                }
+
+                Match endMaxConfidenceInfo = Regex.Match(endText, "Maximum confidence:([\\r]*)");
+                if (endMaxConfidenceInfo.Success)
+                {
+                    int intEndMaxConfidenceInfo = Int32.Parse(endMinConfidenceInfo.Groups[1].Value);
+                    end.MaxConfidence = intEndMaxConfidenceInfo;
+                }
+
+                Match endMinAlarmLevelInfo = Regex.Match(endText, "Minimum alarm level:([\\r]*)");
+                if (endMinAlarmLevelInfo.Success)
+                {
+                    int intEndMinAlarmLevelInfo = Int32.Parse(endMinAlarmLevelInfo);
+                    end.MinAlarmLevel = intEndMinAlarmLevelInfo;
+                }
+
+                Match endMaxAlarmLevelInfo = Regex.Match(endText, "Maximum alarm level:([\\r]*)");
+                if (endMaxAlarmLevelInfo.Success)
+                {
+                    int intEndMaxAlarmLevelInfo = Int32.Parse(endMaxAlarmLevelInfo);
+                    end.MaxAlarmLevel = intEndMaxAlarmLevelInfo;
+                }
+
+                endings.Add(end);
+            }
 
         }
 
@@ -67,7 +124,7 @@ namespace Text_based_game
             throw new ArgumentException("Event does not exist");
         }
         //Checks conditions for the choices of the current event.
-        static bool isChoicePossible(Choice choice, int confidence, List<string> storyline, List<string> inventory)
+        static bool IsChoicePossible(Choice choice, int confidence, List<string> storyline, List<string> inventory)
         {
             if (confidence < choice.MinimumConfidence)
             {
@@ -88,7 +145,7 @@ namespace Text_based_game
         }
         static void Main(string[] args)
         {
-            //Inizalasation
+            //Initialization
             //Reading files and then splitting them.
             string eventsPath = "Events.txt";
             string eventsText = File.ReadAllText(eventsPath);
@@ -99,7 +156,6 @@ namespace Text_based_game
             string[] choiceGroups = choicesText.Split("\r\n\r\n\r\n");
 
 
-
             for (int eventIndex = 0; eventIndex < eventGroups.Length; eventIndex++)
             {
                 //List of choices in individual events.
@@ -107,7 +163,6 @@ namespace Text_based_game
                 string[] choicesPerEvent = choiceGroups[eventIndex].Split("\r\n\r\n");
 
                 //Using regex to find individual items in the choice file.
-
                 foreach (string choiceInfoText in choicesPerEvent)
                 {
                     Match choiceInfo = Regex.Match(choiceInfoText, "Name: (.*)\\r\\nNarration: (.*)");
@@ -181,7 +236,6 @@ namespace Text_based_game
             }
 
 
-
             //Gameplay
             int confidence = 1;
             int alarmLevel = 0;
@@ -211,7 +265,6 @@ namespace Text_based_game
 
                 //TODO:Check ending
 
-
                 //Clearing previous text and output UI.
                 Console.Clear();
                 Console.WriteLine($"Confidence:{confidence} Alarm Level:{alarmLevel}\n");
@@ -219,7 +272,7 @@ namespace Text_based_game
                 var possibleChoices = new List<Choice>();
                 foreach (Choice choice in currentEvent.Choices)
                 {
-                    if (isChoicePossible(choice, confidence, storyline, inventory))
+                    if (IsChoicePossible(choice, confidence, storyline, inventory))
                     {
                         possibleChoices.Add(choice);
                     }
