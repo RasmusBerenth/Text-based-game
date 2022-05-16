@@ -1,53 +1,5 @@
-Name: Dragon fodder
-Narration: something
-Maximum confidence: 
-Minimum confidence: 
-Maximum alarm level: 
-Minimum alarm level: 6
-Event requirement: 
-
-Name: A cunning thief
-Narration: something
-Maximum confidence: 
-Minimum confidence: 5
-Maximum alarm level: 0
-Minimum alarm level: 
-Event requirement: 
-
-Name: Lucky break
-Narration: something
-Maximum confidence: 0
-Minimum confidence: 
-Maximum alarm level: 
-Minimum alarm level: 5
-Event requirement: 
-
-Name: Flying by the seat of your pants
-Narration: something
-Maximum confidence: 
-Minimum confidence: 5
-Maximum alarm level: 
-Minimum alarm level: 5
-Event requirement: 
-
-Name: How am I alive?
-Narration: something
-Maximum confidence: 0
-Minimum confidence: 
-Maximum alarm level: 
-Minimum alarm level: 5
-Event requirement: 
-
-Name: Die a hero
-Narration: something
-Maximum confidence: 
-Minimum confidence: 
-Maximum alarm level: 
-Minimum alarm level: 6
-Event requirement: Help knight
-
 Name: Helper and theif
-Narration: something
+Narration: No tresure, huh? Time will tell as you did save Arnold, mabey you two will be friends. Time will tell.
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
@@ -55,7 +7,7 @@ Minimum alarm level:
 Event requirement: Help knight, Escape via secret door
 
 Name: Dragonslayer
-Narration: something
+Narration: You have slayed the dragon! You have gotten the entier tresuare for yourself. Luckely sir Arnold seems happy with you having taking the treasure as long as he gets all the credit for slaying the dragon, so all everything seems to have worked out.
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
@@ -63,7 +15,7 @@ Minimum alarm level:
 Event requirement: Help knight, Fight dragon
 
 Name: Live long enought the see yourself become the villian
-Narration: something
+Narration: So you got the treasure... Joust so that you know the knight is 100% dead, if you two haden't meet he would have been alive. I mean the dragon killed him but only becouse left him. But who cares, right? Your rich now feel free to spend your ill gotten gains on anything you wish, I sincerly hope it was worth it...
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
@@ -71,17 +23,65 @@ Minimum alarm level:
 Event requirement: Help knight, Escape
 
 Name: Narrow escape
-Narration: something
+Narration: So it turns out you can't trust trolls, o well you got must of the treasure left so you'll be fine you still at least half as rich as toes trolls and your not exactly in a possition to judge them for trying to get in on the tresure.
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
 Minimum alarm level: 
 Event requirement: Give gold to the trolls
 
+Name: How am I alive?
+Narration: Are you still alive? How? You must have almost died like a zillion times... Whatever, you got the treasure and thats what matters know you can retaier and live peasfully, not to offend but you clearly isen't cut out for this.
+Maximum confidence: 0
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 5
+Event requirement: Escape
+
+Name: Flying by the seat of your pants
+Narration: You managed to get out alive and probebly almost died at more than one occation however your confidence never faulterd and the treasure is yours. We should do this again sometime.
+Maximum confidence: 
+Minimum confidence: 5
+Maximum alarm level: 
+Minimum alarm level: 5
+Event requirement: Escape
+
+Name: Lucky break
+Narration: You have succesfully retrived the treasure. There were some close calls... How are you kidding? You got lucky. Regardless of this the treasure is yours.
+Maximum confidence: 0
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 0
+Event requirement: Escape
+
+Name: A cunning thief
+Narration: You have succesfully made it through the dragons lair. Your cunning made your confidence grow and got your treasure without gaining any unwanted attansion. Truly you are a master of your craft.
+Maximum confidence: 
+Minimum confidence: 5
+Maximum alarm level: 0
+Minimum alarm level: 
+Event requirement: Escape
+
+Name: Die a hero
+Narration: The dragon has eaten you, however your sacrefice has not been in vain as the knight sir Arnold will sing your praises for saving him from this ordeal.
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 6
+Event requirement: Help knight
+
+Name: Dragon fodder
+Narration: You have been eaten by the dragon.
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 6
+Event requirement: 
+
 Name: Rags to riches
-Narration: something
+Narration: You got the treasure, you rich know anything you want can be yours. Sure you stumbled and you werent allways fully confident in your desisions. But forget about all that becouse you joust went from a poor thief form nowhere to being rich enough to by your own fully furniched and staffed castle or anything else you might want. Long live the dragons and there hoards of gold, and the thiefs bold enough to steal from them!
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
 Minimum alarm level: 
-Event requirement: 
+Event requirement: Escape

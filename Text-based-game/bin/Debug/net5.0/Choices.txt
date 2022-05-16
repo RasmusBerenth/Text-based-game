@@ -48,14 +48,56 @@ Narration: You decide to take a break and take a seat by the fireplace. You end 
 Alarm level alteration: -1
 
 
-Name: Continue
-Narration: c
+Name: Sneak past them
+Narration: You sneak past them using the forest and stalagmites as cover, at one point you could have sworn that you were spotted however the worshippers shanting dosen't seem to stop. As you get to the entrance you realize that you can't get into the lair whiout being spotted by the worshippers so you are foced to whait. After a moment you walk into the lair somewhat anticlimactically. Suppose, noting lost nothing gained.
+Next event: Path from the main entrance
+
+Name: Wait for them to leave
+Narration: You wait in the forest... 10 minits goes by... 30 minits... after an hour has gone by the worshippers seems to leave and you make your way into the dragons lair. Seems like there should have been a faster way in... You lose 1 confidence.
+Confidence alteration: -1
+Next event: Path from the main entrance
+
+Name: Pretend to be here to sacrefice treasure to the dragon
+Narration: You remember the coins you found in the strange tent and a cunning plan is constructed. You walk up tell the worshippers that you have traveled you sacrafice the gold coin to the dragon. They seem to protest but you insist and walk into the lair, you can practecly feel their eyes on you, they must think they got one over on you but you will show them how will have the last laugh. You gain 1 confidence.
+Confidence alteration: +1
+Special item requirement: Gold coins
+Next event: Path from the main entrance
+
+Name: Just walk past them
+Narration: You watch the worshippers for awhile and they don't seem especially dangerous. You take a deep breath and deside to take your chances and walk up to them, no reaction, you walk past them, seems like some of them looks at you and then return to there prayers. Thinking about it there probebly just lokals who wants to stay out of trouble. Things have been pritty easy so far and your confidence grows. Gain 2 confidence
+Minimum confidence: 3
+Confidence alteration: +2
+Next event: Path from the main entrance
+
+
+Name: Continue travelling between the stalagmites.
+Narration: Travelling between the stalagmites is combersome and you can't help but to break some of the smaller stalagmites which are surprisingly fragile which you might as well put in you pockets. However while it is hard moving between the stalagmites the cover it provides make you feel more confident. You gain 1 confidence.
+Confidence alteration: +1
+Special item gained: Stalagmite pieces
+Next event: Right or left
+
+Name: Take the path from now on.
+Narration: Traveling on the path while convinient makes you feel exposed like you could be spotted from anywhere. You lose 1 confidence.
+Confidence alteration: -1
+Next event: Right or left
+
+
+Name: Right
+Narration: You start heading the right way.
+Next event: Troll attack
+
+Name: Left
+Narration: You start heading the left way.
+Next event: Help knight
+
+
+Name: continue
+Narration: a
 
 
 Name: Continue
-Narration: c
+Narration: b
 
 
 Name: Continue
 Narration: c
-

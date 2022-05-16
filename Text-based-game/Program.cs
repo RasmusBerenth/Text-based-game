@@ -5,15 +5,14 @@ using System.Text.RegularExpressions;
 
 namespace Text_based_game
 {
-    class End
+    class Ending
     {
         public string Name;
         public string Narration;
-        public string EventRequirement;
-        public int MinConfidence;
-        public int MaxConfidence;
-        public int MinAlarmLevel;
-        public int MaxAlarmLevel;
+        public string[] EventRequirements;
+        public int MinimumConfidence = 0;
+        public int MaximumConfidence = Int32.MaxValue;
+        public int MinimumAlarmLevel = 0;
     }
     class Event
     {
@@ -33,81 +32,60 @@ namespace Text_based_game
         public string Name;
         public string NextEvent;
     }
-    [Flags]
-    public enum ConditionCheck
-    {
-        None = 0,
-        Confidence = 1,
-        Alarm = 2,
-        Death = 4,
-        Story = 8,
-    }
     internal class Program
     {
         static List<Event> events = new List<Event>();
+        static List<Ending> endings = new List<Ending>();
 
-        //A method which checks if the game is over and the ending the player got if the game is over.
-        static End HandleEndings(int confidence, int alarmLevel, List<string> storyline)
+
+        //A method which checks if the game is over.
+        static Ending CheckGameOver(int alarmLevel, int confidence, List<string> storyline)
         {
-            string endPath = "Endings.txt";
-            string endText = File.ReadAllText(endPath);
-            string[] endGroups = endText.Split("\r\n\r\n");
-
-            End end = new End();
-            List<End> endings = new List<End>();
-
-            foreach (string ending in endGroups)
+            foreach (Ending ending in endings)
             {
-                Match endNameInfo = Regex.Match(endText, "Name:([\\r]*)");
-                if (endNameInfo.Success)
+                if (confidence < ending.MinimumConfidence)
                 {
-                    end.Name = endNameInfo.Groups[1].Value;
+                    continue;
                 }
 
-                Match endNarrationInfo = Regex.Match(endText, "Narration:([\\r]*)");
-                if (endNarrationInfo.Success)
+                if (confidence > ending.MaximumConfidence)
                 {
-                    end.Narration = endNarrationInfo.Groups[1].Value;
+                    continue;
                 }
 
-                Match endEventRequirementInfo = Regex.Match(endText, "Event requirement:([\\r]*)");
-                if (endEventRequirementInfo.Success)
+                if (alarmLevel < ending.MinimumAlarmLevel)
                 {
-
-                    end.EventRequirement = endEventRequirementInfo.Groups[1].Value;
+                    continue;
                 }
 
-                Match endMinConfidenceInfo = Regex.Match(endText, "Minimum confidence:([\\r]*)");
-                if (endMinConfidenceInfo.Success)
+                if (ending.EventRequirements != null)
                 {
-                    int intEndMinConfidenceInfo = Int32.Parse(endMinConfidenceInfo.Groups[1].Value);
-                    end.MinConfidence = intEndMinConfidenceInfo;
+                    bool eventRequirementsAreMet = true;
+                    foreach (string eventRequirement in ending.EventRequirements)
+                    {
+                        if (!storyline.Contains(eventRequirement))
+                        {
+                            eventRequirementsAreMet = false;
+                            break;
+                        }
+                    }
+
+                    if (!eventRequirementsAreMet)
+                    {
+                        continue;
+                    }
+
                 }
 
-                Match endMaxConfidenceInfo = Regex.Match(endText, "Maximum confidence:([\\r]*)");
-                if (endMaxConfidenceInfo.Success)
-                {
-                    int intEndMaxConfidenceInfo = Int32.Parse(endMinConfidenceInfo.Groups[1].Value);
-                    end.MaxConfidence = intEndMaxConfidenceInfo;
-                }
-
-                Match endMinAlarmLevelInfo = Regex.Match(endText, "Minimum alarm level:([\\r]*)");
-                if (endMinAlarmLevelInfo.Success)
-                {
-                    int intEndMinAlarmLevelInfo = Int32.Parse(endMinAlarmLevelInfo);
-                    end.MinAlarmLevel = intEndMinAlarmLevelInfo;
-                }
-
-                Match endMaxAlarmLevelInfo = Regex.Match(endText, "Maximum alarm level:([\\r]*)");
-                if (endMaxAlarmLevelInfo.Success)
-                {
-                    int intEndMaxAlarmLevelInfo = Int32.Parse(endMaxAlarmLevelInfo);
-                    end.MaxAlarmLevel = intEndMaxAlarmLevelInfo;
-                }
-
-                endings.Add(end);
+                return ending;
             }
+            return null;
 
+        }
+        //A method which checks which ending the player got if the game is over.
+        static void HandleEnding(Ending ending)
+        {
+            Console.WriteLine(ending.Narration);
         }
 
         //TODO:EncounteringTheDragon method
@@ -155,7 +133,11 @@ namespace Text_based_game
             string choicesText = File.ReadAllText(choicesPath);
             string[] choiceGroups = choicesText.Split("\r\n\r\n\r\n");
 
+            string endPath = "Endings.txt";
+            string endText = File.ReadAllText(endPath);
+            string[] endGroups = endText.Split("\r\n\r\n");
 
+            //Initializ choices and events.
             for (int eventIndex = 0; eventIndex < eventGroups.Length; eventIndex++)
             {
                 //List of choices in individual events.
@@ -217,11 +199,8 @@ namespace Text_based_game
                         choice.NextEvent = nextEventInfo.Groups[1].Value;
                     }
 
-
-
                     //Adding choices into a list that goes to event class.
                     eventChoices.Add(choice);
-
                 }
 
                 //Using regex to find individual items in the events file.
@@ -233,6 +212,55 @@ namespace Text_based_game
                 newEvent.Narration = eventInfo.Groups[2].Value;
                 newEvent.Choices = eventChoices;
                 events.Add(newEvent);
+            }
+
+            //Initializ endings.
+            foreach (string endGroup in endGroups)
+            {
+                Ending ending = new Ending();
+
+                Match endNameInfo = Regex.Match(endGroup, "Name: ([^\\r]+)");
+                if (endNameInfo.Success)
+                {
+                    ending.Name = endNameInfo.Groups[1].Value;
+                }
+
+                Match endNarrationInfo = Regex.Match(endGroup, "Narration: ([^\\r]+)");
+                if (endNarrationInfo.Success)
+                {
+                    ending.Narration = endNarrationInfo.Groups[1].Value;
+                }
+
+                Match endEventRequirementInfo = Regex.Match(endGroup, "Event requirement: ([^\\r]+)");
+                if (endEventRequirementInfo.Success)
+                {
+                    string[] eventRequitements = endEventRequirementInfo.Groups[1].Value.Split(", ");
+                    ending.EventRequirements = eventRequitements;
+                }
+
+                Match endMinConfidenceInfo = Regex.Match(endGroup, "Minimum confidence: ([^\\r]+)");
+                if (endMinConfidenceInfo.Success)
+                {
+                    int intEndMinConfidenceInfo = Int32.Parse(endMinConfidenceInfo.Groups[1].Value);
+                    ending.MinimumConfidence = intEndMinConfidenceInfo;
+                }
+
+                Match endMaxConfidenceInfo = Regex.Match(endGroup, "Maximum confidence: ([^\\r]+)");
+                if (endMaxConfidenceInfo.Success)
+                {
+                    int intEndMaxConfidenceInfo = Int32.Parse(endMaxConfidenceInfo.Groups[1].Value);
+                    ending.MaximumConfidence = intEndMaxConfidenceInfo;
+                }
+
+                Match endMinAlarmLevelInfo = Regex.Match(endGroup, "Minimum alarm level: ([^\\r]+)");
+                if (endMinAlarmLevelInfo.Success)
+                {
+                    int intEndMinAlarmLevelInfo = Int32.Parse(endMinAlarmLevelInfo.Groups[1].Value);
+                    ending.MinimumAlarmLevel = intEndMinAlarmLevelInfo;
+                }
+
+
+                endings.Add(ending);
             }
 
 
@@ -264,6 +292,12 @@ namespace Text_based_game
                 }
 
                 //TODO:Check ending
+                Ending ending = CheckGameOver(alarmLevel, confidence, storyline);
+                if (ending != null)
+                {
+                    HandleEnding(ending);
+                    break;
+                }
 
                 //Clearing previous text and output UI.
                 Console.Clear();
@@ -283,8 +317,6 @@ namespace Text_based_game
                     Console.WriteLine($"{counter}. {choice.Name}");
                     counter++;
                 }
-
-
 
                 //Selects a choice based on the players input.
                 Choice selectedChoice;
@@ -318,8 +350,14 @@ namespace Text_based_game
                 Console.WriteLine(selectedChoice.Narration);
                 Console.ReadLine();
 
+
                 confidence += selectedChoice.ConfidenceAlteration;
                 alarmLevel += selectedChoice.AlarmLevelAlteration;
+
+                if (alarmLevel < 0)
+                {
+                    alarmLevel = 0;
+                }
 
                 //Adds found item to inventory.
                 if (selectedChoice.SpecialItemGained != null)
@@ -350,7 +388,6 @@ namespace Text_based_game
                 {
                     currentEvent = GetEvent(selectedChoice.NextEvent);
                 }
-
 
 
             } while (true);

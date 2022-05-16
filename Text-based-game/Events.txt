@@ -8,10 +8,22 @@ Name: Knights camp
 Narration: As you press on you see glimpses of colors not familiar to the forest. As you sneak forward, hiding in the undergrowth. In the clearing, a blue and orange tent has been set up with a fireplace in front which seems to have burnt out a while ago. What do you do? 
 
 Name: The main entrance
-Narration: m
+Narration: As you travel through the forest hidding in the vegetation that the forest provide you spot the main entrance. As the forest end a massiv cave whith stalactites hanging from the celling like fangs. In front of the cave a small shrine has been raised and half a dussin people in dark robbes.
+
+Name: Path from the main entrance
+Narration: You have made it into the dragonslair the roof litterd with stalactites and gigant stalacmites growing from the floor, it looks like you heading towards the belly of the beast of literally and metaphorically. It seems like a bunch of the stalagmites has been brocken and carved a path. How will you make your way forward.
+
+Name: Right or left
+Narration: You find yourself at an intersection from the right you hear a faint clanging sound and only silence from the left. Either way you can see a faint glow like from a smoldering fire.
+
+Name: Troll attack
+Narration: As you head down the right path making sure you are hidden amogst the shadows.
 
 Name: The underground tunnel
 Narration: u
 
 Name: The secret door
 Narration: s
+
+Name: Help knight
+Narration: sa
