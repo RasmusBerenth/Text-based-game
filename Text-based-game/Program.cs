@@ -350,7 +350,6 @@ namespace Text_based_game
                 Console.WriteLine(selectedChoice.Narration);
                 Console.ReadLine();
 
-
                 confidence += selectedChoice.ConfidenceAlteration;
                 alarmLevel += selectedChoice.AlarmLevelAlteration;
 

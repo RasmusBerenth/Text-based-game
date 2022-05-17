@@ -1,3 +1,19 @@
+Name: Die a hero
+Narration: The dragon has eaten you, however your sacrefice has not been in vain as the knight sir Arnold will sing your praises for saving him from this ordeal.
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 6
+Event requirement: Help knight
+
+Name: Dragon fodder
+Narration: You have been eaten by the dragon.
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 6
+Event requirement: 
+
 Name: Helper and theif
 Narration: No tresure, huh? Time will tell as you did save Arnold, mabey you two will be friends. Time will tell.
 Maximum confidence: 
@@ -61,22 +77,6 @@ Minimum confidence: 5
 Maximum alarm level: 0
 Minimum alarm level: 
 Event requirement: Escape
-
-Name: Die a hero
-Narration: The dragon has eaten you, however your sacrefice has not been in vain as the knight sir Arnold will sing your praises for saving him from this ordeal.
-Maximum confidence: 
-Minimum confidence: 
-Maximum alarm level: 
-Minimum alarm level: 6
-Event requirement: Help knight
-
-Name: Dragon fodder
-Narration: You have been eaten by the dragon.
-Maximum confidence: 
-Minimum confidence: 
-Maximum alarm level: 
-Minimum alarm level: 6
-Event requirement: 
 
 Name: Rags to riches
 Narration: You got the treasure, you rich know anything you want can be yours. Sure you stumbled and you werent allways fully confident in your desisions. But forget about all that becouse you joust went from a poor thief form nowhere to being rich enough to by your own fully furniched and staffed castle or anything else you might want. Long live the dragons and there hoards of gold, and the thiefs bold enough to steal from them!

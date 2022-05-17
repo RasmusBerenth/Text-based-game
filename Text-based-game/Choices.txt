@@ -1,20 +1,20 @@
 Name: The main entrance
 Narration: You start traveling towards the main entrance through the dence forest.You feel confident youve made the right decision. You gain 1 confidence. 
 Confidence alteration: +1
-Next event: Dragon sighting
 Special item gained: Main entrance
+Next event: Dragon sighting
 
 Name: The underground tunnels
 Narration: You start traveling towards the underground tunnel through the dence forest. You feel confident youve made the right decision. You gain 1 confidence.
 Confidence alteration: +1
-Next event: Dragon sighting
 Special item gained: Underground tunnels
+Next event: Dragon sighting
 
 Name: The secret door
 Narration: You start traveling towards the secret door through the dence forest. You feel confident youve made the right decision. You gain 1 confidence.
 Confidence alteration: +1
-Next event: Dragon sighting
 Special item gained: Secret door
+Next event: Dragon sighting
 
 
 Name: Look up
@@ -92,13 +92,76 @@ Narration: You start heading the left way.
 Next event: Help knight
 
 
-Name: continue
+Name: Push the troll back down the hole
+Narration: You gather your confidence and rush forward and pushe the troll down for where it came from. It howls as it falls down and then abruptly stops the sound echoing around you. You gain 1 alarm level.
+Minimum confidence: 3
+Alarm level alteration: +1
+Next event: Dragons' hoard
+
+Name: Clock the troll over the head
+Narration: You sneak up behind the troll and clock it over the head in order to knock it out cold... Turns out it is as thick headed as it looks and you weren't even close so thinking fast you put it in a shockhold. As the two of you struggle mangages the troll make a lot of noice and hits you right in the face before it finaly goes limp. Feeling dejected you continue. You lose 1 confidence and gain 1 alarm level.
+Confidence alteration: -1
+Alarm level alteration: +1
+Next event: Dragons' hoard
+
+Name: Attempt to sneak past the troll inbetween the stalagmites
+Narration: You attempt to sneak between the stalagmites in the cave you feel pretty good about it, that is until you slip and break of some of the smaller stalagmites. The troll snaps to attension luckely it seems to let its confidence falter and scurries back into its tunnel, at least you are braver than a troll you think. With bolstered confidence you carry on. You gain +1 confidence.
+Confidence alteration: +1
+Next event: Dragons' hoard
+
+Name: Scare away the troll
+Narration: You deside to attempt to scare the troll. You climb up one of the sturdier stalagmites with the faint light from the entrance create a silhouettes of a dragon and make growling sounds to scare it of, or rather thats the plan. What acully happens is that while climbing the stalagmite it breaks and you fall to the ground when you try to see the troll it appears to have left. You feel a bit sore from the fall that in combination with the anticlimactic solution to the problem leaves you slightly deflated. You lose 1 confidence.
+Minimum confidence: 5
+Confidence alteration: -1
+Next event: Dragons' hoard
+
+
+Name: Constrution not completed
 Narration: a
 
 
-Name: Continue
+Name: Construction not completed
 Narration: b
 
 
-Name: Continue
+Name: Construction not completed
 Narration: c
+
+
+Name: Use stalagmite pieces to cause distraction
+Narration: 
+Special item requirement: Stalagmite pieces
+Confidence alteration: 
+Alarm level alteration: 
+Special item gained: Treasure
+Next event: Making an exit 
+
+Name: Move from stalacmite to stalacmite stealing treasure as you go
+Narration: 
+Confidence alteration: 
+Alarm level alteration: 
+Special item gained: Treasure
+Next event: Making an exit
+
+Name: Hide behind the hoard
+Narration: You slowly move behind the hoard, practicly standing on the smoldering fire. The stench of sulffer sticks to you but that only servce to masking your sent and the gold is an easy steal. You gain 2 confidence and lose 1 alarm level.  
+Minimum confidence: 4
+Confidence alteration: +2
+Alarm level alteration: -1
+Special item gained: Treasure
+Next event: Making an exit
+
+Name: Take as much gold as you can and run
+Narration: You decide that its best to get in and out as fast of as possible so you grab as much gold as you can carry and bolt out of there. The dragon begins to rouse as you do make a quite a lot of noice, you begin to think this might not have been the best idée. You lose 1 confidence and gain 2 alarm level.
+Minimum confidence: 6
+Confidence alteration: -1
+Alarm level alteration: +2
+Special item gained: Treasure
+Next event: Making an exit
+
+Name: 
+Narration: 
+Confidence alteration: 
+Alarm level alteration: 
+Special item gained: Treasure
+Next event: Making an exit

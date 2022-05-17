@@ -16,6 +16,9 @@ Narration: You have made it into the dragonslair the roof litterd with stalactit
 Name: Right or left
 Narration: You find yourself at an intersection from the right you hear a faint clanging sound and only silence from the left. Either way you can see a faint glow like from a smoldering fire.
 
+Name: Troll attack
+Narration: As you head down the right path making sure you are hidden amogst the shadows. Up ahead you see silhouettes that are moving, taking a closer look you see a troll with a hemp bag climbing out of a hole in the ground. Trolls being notoriously greedy, malicious and thick headed makes it likly that this one is going to be in the way. How should we deal with it?
+
 Name: The underground tunnel
 Narration: u
 
@@ -23,4 +26,7 @@ Name: The secret door
 Narration: s
 
 Name: Help knight
-Narration: Sir Arnold has arrived!!!
+Narration: sa
+
+Name: Dragons' hoard
+Narration: The warm glow grows forcing you to relay on the stalagmites that has been growing ever larger the deeper in you have gotten. As you are traveling you start hearing deep breathing as you enter the central chamber from behind your stalagmite you see the massiv hoard of gold, silver and jewels on top of which lays the dragon seemingly asleep. Behind the dragon is a smoldering flame making the gold glimmer and making the dragons red scale form a menacing silhouettes. Know how to make yor approch?
