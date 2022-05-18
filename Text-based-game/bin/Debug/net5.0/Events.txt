@@ -1,3 +1,15 @@
+Name: Dragon encounter
+Narration: That is when the dragon appears and it seems you have gathered all of its attension. Now its do or die your next misstake will be your last.
+
+Name: Hidding from the dragon
+Narration: You run through the cave trying to find somewhere to hide. The place you choose is...
+
+Name: The chase
+Narration: You start running towards the exit. Suddenly the dragon makes a jump and using its wings glides across the cave so that it is now in front of you. Waiting, salavating and seemingly preparing to breath some more fire, what do you do?
+
+Name: Escape the dragon
+Narration: You got past the dragon and you manage to gain some ground on it but it wont be long before it catches up you. You have reach the entrance and now you must find a hidding spot.
+
 Name: Select entrance
 Narration: Having searched the area earlier, you have discovered three ways into the dragon's lair. Now it's time to choose one and cross your fingers that you pick the best one.
 
@@ -20,13 +32,22 @@ Name: Troll attack
 Narration: As you head down the right path making sure you are hidden amogst the shadows. Up ahead you see silhouettes that are moving, taking a closer look you see a troll with a hemp bag climbing out of a hole in the ground. Trolls being notoriously greedy, malicious and thick headed makes it likly that this one is going to be in the way. How should we deal with it?
 
 Name: The underground tunnel
-Narration: u
+Narration: ut
 
 Name: The secret door
-Narration: s
+Narration: sd
 
 Name: Help knight
-Narration: sa
+Narration: hk
 
 Name: Dragons' hoard
 Narration: The warm glow grows forcing you to relay on the stalagmites that has been growing ever larger the deeper in you have gotten. As you are traveling you start hearing deep breathing as you enter the central chamber from behind your stalagmite you see the massiv hoard of gold, silver and jewels on top of which lays the dragon seemingly asleep. Behind the dragon is a smoldering flame making the gold glimmer and making the dragons red scale form a menacing silhouettes. Know how to make yor approch?
+
+Name: Making an exit
+Narration: You leave the hoard behind you light of the flames in you back. All that is leaft is to get out whithout causing to much of a disturbance. Better put some pep in your step the dragon could wake up anytime now. Up ahead you spot something coming out of the ground, a troll!. You can't let it be in you way not when you are so close to the exit. What do you do?
+
+Name: Escape
+Narration: You can see the exit the main entrance open up you can see the forest reaching for the horizon. You feel the freach air in your lungs now all that is left is to spend you newly acquired treasure. 
+
+Name: The end
+Narration: end off the game

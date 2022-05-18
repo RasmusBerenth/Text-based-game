@@ -1,3 +1,66 @@
+Name: Run for your life
+Narration: You do the smart thing and run like your life depends on it, becouse it does. Time to find somewhere to hide.
+Next event: Hidding from the dragon
+
+Name: Fight, dragon is back on the menu
+Narration: Did you think I was joking? I'm not narrating this. You gain 1 alarm level.
+Alarm level alteration: +1
+Next event: The end
+
+Name: Make a break for the exit
+Narration: You have your treasure and the exit isn't far. You start running towards the exit with the dragon nipping at your heels.
+Special item requirement: Treasure
+Next event: The chase
+
+
+Name: Hide amognst the stalacmites
+Narration: You hide amogst the stalcmites and for a moment it looks as if you have lost the dragon. You can hear it tracking, you relize to late that it is following youre sent once each reach the cluster of stalacmites your hidding amogst your world has consumed by its firey breath.\n...\nYou gain 1 alarm level.\n...
+Alarm level alteration: +1
+
+Name: Hide in underground tunnels
+Narration: You find an opening in the ground, there should be a network of underground tunels. You jump down one and is almost overwelmd by the stench. Navigating the tunnels you can hear the dragon rampaging and on more than one occasion do you feel the temprature rise but eventully it seems to calm down. You find another way out of the tunnels and keep walking onwards.
+Minimum confidence: 4
+Alarm level alteration: -1
+Next event: Dragons' hoard
+
+Name: Hide in cracks in the wall
+Narration: You run and can't find a good hidding spot until you find a crack in the wall. The crack seems to be a tunnel that seems to go into a sharp turn and you just manage to get out of the way of the fire. When you go back to the entrance it's blocked by a boulder, luckely you spott another crack higher up climbing to it is difficult but you managed and when you are back on the ground you head back into the cave.
+Alarm level alteration: -1
+Next event: Dragons' hoard
+
+
+Name: Full speed ahead
+Narration: You see the dragon taking a deep breath and you make your decision you keep running. As the dragon you tilt backwards and slide under the dragon and between its leges doging the tail and standing up into a run in on flouid motion. You can't help but think that you must be looking awsome. You gain 1 confidence.
+Confidence alteration: +1
+Minimum confidence: 4
+Next event: Escape the dragon
+
+Name: Parkour
+Narration: You deside to jump of the wall and use the momentum to launch yourself over the dragon. You jump and launch yourself and land on top of the dragon and is now hanging on for dear life before it awentully shackes you of. The air get shot out of your lungs, as you are trying to catch your breath the dragons fangs comes down on you...\nYou gain 1 alarm level.\n...
+Alarm level alteration: +1
+Next event: The end
+
+Name: Throw some of the in the air and keep runing
+Narration: It pains you but it is necessary, you throw some of the treasure in the air the dragon seem momentarly distracted which gives you an opportunity to run past it. Throwing away part of the treasure make you feel pretty bad. You lose 1 confidence.
+Confidence alteration: +1
+Next event: Escape the dragon
+
+
+Name: Hide amogst some of the stalacmites by the entrance
+Narration: You try hiding amogst the stalcmites unfortunetly it dosen't take the dragon long to find you and takes a final breath for you...\nYou gain 1 alarm level\n...
+Alarm level alteration: +1
+Next event: The end
+
+Name: Hide in the shrine
+Narration: You jump into the shrine and hide amogst the sacrefices that has been left there, which mostly seems to be chickens and other small farm animals. You can only here it, the dragon sniffing after the longest second of your life a earthshattering roar it flys up in the air and seems to start searching the forest. But you seem to have made it.
+Next event: Escape
+
+Name: Hide in the forest
+Narration: You run for the forest unfortunatly you don't make it and the dragon comes out of its lair and with one breath spews out a stream of fire...\nYou gain 1 alarm level\n...
+Alarm level alteration: +1
+Next event: The end
+
+
 Name: The main entrance
 Narration: You start traveling towards the main entrance through the dence forest.You feel confident youve made the right decision. You gain 1 confidence. 
 Confidence alteration: +1
@@ -116,35 +179,53 @@ Confidence alteration: -1
 Next event: Dragons' hoard
 
 
-Name: Constrution not completed
-Narration: a
+Name: Try to sneak past them
+Narration: Being sneaky is always the best way so you wait until one troll can be seen and make your way. Unfortunetly the underground tunnels are a maze and you get lost whiout finding a way into the lair. Eventully a troll finds you and you are captured however the troll leader seem inprest and offers to help you he even offers to couse a distraction the dragon for you if possible. You feel more confident having an accual plan and the compliments doesn't hurt. You gain 1 confidence and lose 1 alarm level.
+Confidence alteration: +1
+Alarm level alteration: -1
+Minimum confidence: 3
+Next event:
+
+Name: Approch them with a deal
+Narration: You approch the troll and ask to be taken to their leader and they take you to him, you could feel like being tied up was unnecessary but you did make a pretty good deal with the stupid trolls, giving the larger piece to yourself all in all you feel pretty confident. You gain 1 confidence.
+Confidence alteration: +1
+Next even:
+
+Name: Just walk in
+Narration: You see no reason why they would try and stop you so deside to simpley walk in. They capture you immediately, in hindsight your not sure why that would work. The troll tie you up and then force you to steal the gold from the dragon... So you agree, since you would have done that anyway and who knows what might happen inside the layer. Even if it is a blow to your confidence to be captured so easely. You lose 1 confidence.
+Confidence alteration: -1
+Next even:
+
+Name: Bribe them
+Narration: You approch one of the trolls when they seem to be alone and offer them the gold coin if they would let them into the tunnels. You must have choosen a very amiable troll becouse he agrees and even offers to guid you throw the tunnels and back. You confidence grows as you seem to have found a hidden talent at judging trolls. You gain 1 confidence. 
+Confidence alteration: +1
+Special item requirement: Gold coins
+Next event:
 
 
-Name: Construction not completed
+Name: Construction not completed (secret door)
 Narration: b
 
 
-Name: Construction not completed
+Name: Construction not completed (Help knight)
 Narration: c
 
 
-Name: Use stalagmite pieces to cause distraction
-Narration: 
-Special item requirement: Stalagmite pieces
-Confidence alteration: 
-Alarm level alteration: 
+Name: Test if the dragon is asleep
+Narration: You throw some of the stalagmite pieces on the dragon from your hiding place. They hit it's scale each time whitout there being any reaction from the dragon, seem to be soundly asleep. You gather whatever confidnece you have and gather as much of the treasure as you can before it wakes up, now for getting to the exit. You gain 1 alarm level. 
+Alarm level alteration: +1
 Special item gained: Treasure
+Special item requirement: Stalagmite pieces
 Next event: Making an exit 
 
 Name: Move from stalacmite to stalacmite stealing treasure as you go
-Narration: 
-Confidence alteration: 
-Alarm level alteration: 
+Narration: You start moving between the stalacmites stealing from the outer edges of the hoard. You manege to get a small treasure but you can't help but feeling like you are playing it a bit safe. Yoy lose 1 confidence.
+Confidence alteration: -1
 Special item gained: Treasure
 Next event: Making an exit
 
 Name: Hide behind the hoard
-Narration: You slowly move behind the hoard, practicly standing on the smoldering fire. The stench of sulffer sticks to you but that only servce to masking your sent and the gold is an easy steal. You gain 2 confidence and lose 1 alarm level.  
+Narration: You slowly move behind the hoard, practicly standing on the smoldering fire. The stench of sulffer sticks to you but that only servce to masking your sent and the gold is an easy steal and you even think you manage to get some of the nicer pieces. You gain 2 confidence and lose 1 alarm level.  
 Minimum confidence: 4
 Confidence alteration: +2
 Alarm level alteration: -1
@@ -159,9 +240,47 @@ Alarm level alteration: +2
 Special item gained: Treasure
 Next event: Making an exit
 
-Name: 
-Narration: 
-Confidence alteration: 
-Alarm level alteration: 
+Name: Steal the most valuable item in the treasure
+Narration: You are marveling at the hoard of treasure when you see it, a wooden chest decorated with gold leafs that seems to be filled with jewelry with the clearest gemstones you have ever seen. Unforunally it rests under one of the dragon tallons but this is no time for cowardes. You sneak forward carfully not to disturb the gold more than necessary but your shacking legs can't help but to make a little noice. Coming up on the dragons tallon you slowly and gently lift it and move the chest away it slides down and makes a bit of noice but it is yours now you leave thinking how lucky you are the dragon diden't wake up. The thoughts dosen't seem to want to leave you alone. You lose 1 confidence and gain +2 alarm level.
+Confidence alteration: -1
+Alarm level alteration: +2
 Special item gained: Treasure
 Next event: Making an exit
+
+Name: I already have my treasure, time to leave
+Narration: You seem to have gotten lost while trying to escape the dragon, it seems to have gone back to sleep so it is time get out of here.
+Special item requirement: Treasure
+Next event: Making an exit
+
+
+Name: Leap over the troll
+Narration: You have no time for this so you just keep running leaping over the troll, looking very cool, leaving the troll surprised and more importent far away from you. You gain 1 confidence.
+Minimum confidence: 5
+Confidence alteration: +1
+Next event: Escape
+
+Name: Run past it
+Narration: You attempt to run past the troll, as you do the troll grabs you leg and tries to drag you down the hole in the ground. You kick it right on the nose and its howl echos through the cave. But you get away, in other news it is definitely time to get out of here. You lose 1 confidence and you gain 1 alarm level.
+Confidence alteration: -1
+Alarm level alteration: +1
+Next event: Escape
+
+Name: Hide and wait for it to pase you by
+Narration: Your mind is racing but you take a breath and calm down, think like a theif. You find a good hidding place. It doesen't take long for the troll to pase you by towards the dragons hoard with a sack. You almost feel bad for it since it is probebly going to become a distraction for your escape. You lose 1 alarm level.
+Minimum confidence: 7
+Alarm level alteration: -1
+Next event: Escape
+
+Name: Bribe the troll
+Narration: You have plenty of treasure sharing some to get out of might not be ideal but it is better than facing the dragon. So you walk up to the troll and take a handfull of jewlery giving it to the troll and motening for it to be quiet
+Confidence alteration: -1
+Next event: Escape
+
+
+Name: Spend treasure
+Narration: ...
+Next event: The end
+
+
+Name: No more choice
+Narration: There are no more choices, if you read this that means that you have broken the game. Please fix me!

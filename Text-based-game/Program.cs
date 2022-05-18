@@ -37,7 +37,6 @@ namespace Text_based_game
         static List<Event> events = new List<Event>();
         static List<Ending> endings = new List<Ending>();
 
-
         //A method which checks if the game is over.
         static Ending CheckGameOver(int alarmLevel, int confidence, List<string> storyline)
         {
@@ -85,11 +84,9 @@ namespace Text_based_game
         //A method which checks which ending the player got if the game is over.
         static void HandleEnding(Ending ending)
         {
+            Console.WriteLine(ending.Name);
             Console.WriteLine(ending.Narration);
         }
-
-        //TODO:EncounteringTheDragon method
-
 
         //Gets the next event.
         static Event GetEvent(string name)
@@ -275,20 +272,19 @@ namespace Text_based_game
             //List of special item player has gained.
             var inventory = new List<string>();
 
-
             //Game intro.
             Console.WriteLine("A lone thief has set up camp in a forest. Less than a day away has a dragon made its lair.\nThe thief has gathered what confidence they could find and has made it this far...\nWill their confidence grow or fallter? Will the dragon spot them or will they go unseen...\nOnly time will tell...");
             Console.WriteLine("\nPress any button to commence with the theft.");
             Console.ReadLine();
 
-            Event currentEvent = events[0];
+            Event currentEvent = events[4];
 
             do
             {
                 //Alarm check
-                if (alarmLevel == 5)
+                if (alarmLevel == 5 && !storyline.Contains("Dragon encounter"))
                 {
-                    //TODO:Move to encounteringTheDragon method
+                    currentEvent = events[0];
                 }
 
                 //TODO:Check ending
@@ -351,8 +347,12 @@ namespace Text_based_game
                 Console.ReadLine();
 
                 confidence += selectedChoice.ConfidenceAlteration;
-                alarmLevel += selectedChoice.AlarmLevelAlteration;
+                if (confidence < 0)
+                {
+                    confidence = 0;
+                }
 
+                alarmLevel += selectedChoice.AlarmLevelAlteration;
                 if (alarmLevel < 0)
                 {
                     alarmLevel = 0;
@@ -388,9 +388,12 @@ namespace Text_based_game
                     currentEvent = GetEvent(selectedChoice.NextEvent);
                 }
 
+                if (storyline.Contains("Hidding from the dragon"))
+                {
+                    storyline.Remove("Dragon encounter");
+                }
 
             } while (true);
-
         }
     }
 }
