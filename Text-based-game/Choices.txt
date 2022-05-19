@@ -304,8 +304,55 @@ Confidence alateration: +1
 Next event: Dragons' hoard
 
 
-Name: Construction not completed (Help knight)
-Narration: The next thing to be written.
+Name: Say hello to whatever is behind the boulder.
+Narration: You sneak up to the boulder and whisper a hello. The clanging stops.\n"Where are you foul demon, come out and face me!" bellows a mans voice his voice echoing through the entier cave.\nAny antemps at reasoning from now on fails the voice seems convinced some demon is trying to trick him and is making an alarming amount of noice doing so. You gain 1 alarm level.
+Alarm level alteration: +1
+Special item gained: Knights mark
+Next event: Empty Hoard
+
+Name: Climb on top of the boulder and take a peak
+Narration: You climb up on the boulder and peak down bellow to see a man dressed in bright blue and orange tabard and chainmail swinging a sword repetedly a the boulder.
+Minimum confidence: 5
+Special item gained: Knights mark
+Next event: Sir Arnold the knight
+
+Name: Not your problem
+Narration: This isen't your problem and whatever is behind that boulder isn't comming out any time soon. You gain 1 confidence.
+Confidence alteration: +1
+Next even: Blocked path
+
+
+Name: Tell him your a knight her to help him
+Narration: The knights stops swinging his sword when he spots where the voice is coming from he sais "You, a knight! I hesitate to belive such a thing! I have never seen such a scrawny knight before!" The comment stings even if it is true. You lose 1 confidence.
+Confidence alteration: -1
+Next event: Jailbreak
+
+Name: Ask him to stop making noice
+Narration: You tell the knight to be quiet. He stop swinging his sword, looks around and then yells "who is there!" before he looks up and sees you and you motion for him to be quiet. He seems to quiet down. You gain 1 confidence.
+Confidene alteration: +1
+Next event: Jailbreak
+
+Name: Leave him, this isn't your problem
+Narration: This isn't your problem, he will probebly get tierd soon stop making all that sound and find another way to escape.
+Next event: Empty hoard
+
+
+Name: Jailbreak
+Narration:
+
+
+Name: Empty hoard with knight
+
+
+Name: Let go
+Narration: Whit not a thought in your mind exept getting home with the gold you start heading for the exit. You lose 4 alarm level.
+Alarm alteration: -4
+Next event: Making an exit
+
+Name: Save the knight
+Narration: As you are about to leave you realize where the dragon was going from earlier and diside right then and dare to save that knight. Your a thief not a monster. You gain 2 confidence.
+Confidence alteration: +2
+Next event: The knight and the dragon
 
 
 Name: Test if the dragon is asleep

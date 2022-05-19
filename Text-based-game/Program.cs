@@ -452,6 +452,14 @@ namespace Text_based_game
                         }
                     }
 
+                    if (currentEvent.Name == "Help knight")
+                    {
+                        if (!inventory.Contains("Knights mark"))
+                        {
+                            storyline.Remove("Help knight");
+                        }
+                    }
+
                     currentEvent = GetEvent(selectedChoice.NextEvent);
                 }
 
