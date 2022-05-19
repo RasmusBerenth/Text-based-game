@@ -6,6 +6,14 @@ Maximum alarm level:
 Minimum alarm level: 6
 Event requirement: Help knight
 
+Name: Stolen treasure
+Narration: You eventully get capured and your vision goes dark. When you wake up your laing in a ditch whit now treasure to be seen. You make your way home with less money than you started.
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 6
+Event requirement: Escaping the trolls
+
 Name: Dragon fodder
 Narration: You have been eaten by the dragon.
 Maximum confidence: 
@@ -44,7 +52,7 @@ Maximum confidence:
 Minimum confidence: 
 Maximum alarm level: 
 Minimum alarm level: 
-Event requirement: Give gold to the trolls
+Event requirement: Escaping the trolls
 
 Name: How am I alive?
 Narration: Are you still alive? How? You must have almost died like a zillion times... Whatever, you got the treasure and thats what matters know you can retaier and live peasfully, not to offend but you clearly isen't cut out for this.

@@ -133,25 +133,25 @@ Confidence alteration: +2
 Next event: Path from the main entrance
 
 
-Name: Continue travelling between the stalagmites.
+Name: Continue travelling between the stalagmites
 Narration: Travelling between the stalagmites is combersome and you can't help but to break some of the smaller stalagmites which are surprisingly fragile which you might as well put in you pockets. However while it is hard moving between the stalagmites the cover it provides make you feel more confident. You gain 1 confidence.
 Confidence alteration: +1
 Special item gained: Stalagmite pieces
 Next event: Right or left
 
-Name: Take the path from now on.
+Name: Take the path from now on
 Narration: Traveling on the path while convinient makes you feel exposed like you could be spotted from anywhere. You lose 1 confidence.
 Confidence alteration: -1
 Next event: Right or left
 
 
 Name: Right
-Narration: You start heading the right way. Gain 1 confidence.
+Narration: You start heading the right path. Gain 1 confidence.
 Confidence alteration: +1
 Next event: Troll attack
 
 Name: Left
-Narration: You start heading the left way.
+Narration: You start heading the left path.
 Next event: Help knight
 
 
@@ -181,34 +181,131 @@ Next event: Dragons' hoard
 
 Name: Try to sneak past them
 Narration: Being sneaky is always the best way so you wait until one troll can be seen and make your way. Unfortunetly the underground tunnels are a maze and you get lost whiout finding a way into the lair. Eventully a troll finds you and you are captured however the troll leader seem inprest and offers to help you he even offers to couse a distraction the dragon for you if possible. You feel more confident having an accual plan and the compliments doesn't hurt. You gain 1 confidence and lose 1 alarm level.
+Minimum confidence: 3
 Confidence alteration: +1
 Alarm level alteration: -1
-Minimum confidence: 3
-Next event:
+Next event: Path or stalacmites (underground tunnel)
 
 Name: Approch them with a deal
 Narration: You approch the troll and ask to be taken to their leader and they take you to him, you could feel like being tied up was unnecessary but you did make a pretty good deal with the stupid trolls, giving the larger piece to yourself all in all you feel pretty confident. You gain 1 confidence.
 Confidence alteration: +1
-Next even:
+Next event: Path or stalacmites (underground tunnel)
 
 Name: Just walk in
 Narration: You see no reason why they would try and stop you so deside to simpley walk in. They capture you immediately, in hindsight your not sure why that would work. The troll tie you up and then force you to steal the gold from the dragon... So you agree, since you would have done that anyway and who knows what might happen inside the layer. Even if it is a blow to your confidence to be captured so easely. You lose 1 confidence.
 Confidence alteration: -1
-Next even:
+Next event: Path or stalacmites (underground tunnel)
 
 Name: Bribe them
-Narration: You approch one of the trolls when they seem to be alone and offer them the gold coin if they would let them into the tunnels. You must have choosen a very amiable troll becouse he agrees and even offers to guid you throw the tunnels and back. You confidence grows as you seem to have found a hidden talent at judging trolls. You gain 1 confidence. 
+Narration: You approch one of the trolls when they seem to be alone and offer them the gold coin if they would let them into the tunnels. You must have choosen a very amiable troll becouse he agrees and even offers to guid you throw the tunnels and back. You confidence grows as you seem to have found a hidden talent at judging trolls. You gain 1 confidence.
 Confidence alteration: +1
 Special item requirement: Gold coins
-Next event:
+Next event: Path or stalacmites (underground tunnel)
 
 
-Name: Construction not completed (secret door)
-Narration: b
+Name: Travelling between the stalagmites
+Narration: Travelling between the stalagmites is combersome and you can't help but to break some of the smaller stalagmites which are surprisingly fragile which you might as well put in you pockets. However while it is hard moving between the stalagmites the cover it provides make you feel more confident. You gain 1 confidence.
+Confidence alteration: +1
+Special item gained: Stalagmite pieces
+Next event: Dragons' hoard
+
+Name: Take the path
+Narration: Traveling on the path while convinient makes you feel exposed like you could be spotted from anywhere. You lose 1 confidence.
+Confidence alteration: -1
+Next event: Dragons' hoard
+
+
+Name: Go with the trolls in the tunnels
+Narration: Go with the trolls they have helpt you so far and either way the devil you know is better than the devil you don't.
+Next event: Escaping the trolls
+
+Name: Risk it with the main entrance
+Narration: You might not know whats at the main entrance but the trolls are definetly not trustworthy. That being sade you don't feel very confident not knowing what is coming. You lose 1 confidnence.
+Confidence alteration: -1
+Next event: Making an exit
+
+
+Name: RIGHT, LEFT, LEFT, LEFT, RIGHT, RIGHT
+Narration: You run doging the trolls attack there tiny eyes glimering in the dark, you keep running for houers being completly lost.
+Alarm level alteration: 5
+Next event: The end
+
+Name: RIGHT, LEFT, LEFT, RIGHT, RIGHT, RIGHT
+Narration: You run doging attacks from trolls there tiny eyes glimering in the dark, who clearly know these tunnels better than you, but thankfully you remeber the way an it's not long until you get out. You keep running with your treasure on the back.
+Next event: The end
+
+Name: LEFT, RIGHT, LEFT, LEFT, RIGHT, LEFT, LEFT
+Narration: You run doging the trolls attack there tiny eyes glimering in the dark, you keep running for houers being completly lost.
+Alarm level alteration: 5
+Next event: The end
+
+
+Name: No use, lets move to another entrance tomorrow.
+Narration: It is getting late and it would be better to rest and take another rather then go in, better to steal from a dragon when rested even if you are somewhat disepointed that there was no secret door. You lose 1 confidence.\n\nAs you set up camp the last rays of the day hitting the wall making your shadow your only companien. As those rays of light hit the wall however faint outlinings of a door. The secret door! You spring into action forget resting your a genious. You gain 1 confidence. You gain 1 alarm level.
+Alarm level alteration: +1
+Next event: Path or stalacmites (secret door)
+
+Name: Try to locate the door based on plant growth
+Narration: You attemp to find the door based on where the plants have grown the most. This does not work it all looks the same to you and you end up wasting the day away until dusk comes and the last lights of the day shows you where the door is. You weren't even close. You lose 1 confidence and you gain 1 alarm level.
+Confidence alteration: -1
+Alarm level alteration: +1
+Next event: Path or stalacmites (secret door)
+
+Name: Search every every nook and crany of the wall
+Narration: You search the entire wall it takes a long time and much effort but you find the door even if you now have gotten tierd and could you a rest you deside to carry on even if you feel somewhat uneasy. You lose 1 confidence.
+Minimum confidence: 3
+Confidence alteration: -1
+Next event: Path or stalacmites (secret door)
+
+Name: Slide a gold coin across the wall to find the door
+Narration: You slide the gold coin across the wall it takes some time but you eventully find cracks in the wall in the shape of a door way and soon you find the handle to open the door. You feel pretty clever. You gain 1 confidence.
+Confidence alteration: +1
+Special item requirement: Gold coins
+Next event: Path or stalacmites (secret door)
+
+
+Name: Travelling between the stalagmites
+Narration: Travelling between the stalagmites is combersome and you can't help but to break some of the smaller stalagmites which are surprisingly fragile which you might as well put in you pockets. However while it is hard moving between the stalagmites the cover it provides make you feel more confident. You gain 1 confidence.
+Confidence alteration: +1
+Special item gained: Stalagmite pieces
+Next event: Right or left (secret door) 
+
+Name: Take the path
+Narration: Traveling on the path while convinient makes you feel exposed like you could be spotted from anywhere. You lose 1 confidence.
+Confidence alteration: -1
+Next event: Right or left (secret door)
+
+
+Name: Right
+Narration: You take the right path. You gain 1 confidence.
+Confidence alteration: +1
+Next event: Blocked path
+
+Name: Left 
+Narration: You take the left path.
+Next event: Help knight
+
+
+Name: Climb over them
+Narration: You choose to climb over them anyway they are made of stone they wont break that easily. As you climb on top of them and they seem to be holding fine however you quickly realize that they are a lot slippery than you realized and as you struggle to keep the balace they collape under you. Gues you should have trusted your first reaction. You lose 1 confidence and lose 1 alarm level.
+Confidence alteration: -1
+Alarm level alteration: +1
+Next event: Dragons' hoard
+
+Name: Crawl under the stalacmites
+Narration: Best not to risk it. You find that they have been cought between to other stalacmites which lift up one end of them and makes a crawl space. However your back scrapes aginst the stalcmites as you are crawling and while the noice probebly dosen't travel far but to you it seem deafening, prehaps it is becouse of the anticipation in the air but it dosen't seem like a good sine. You lose 1 confidence.    
+Confidence alteration: -1
+Next event: Dragons' hoard
+
+Name: Climb around the fallen stalcmites
+Narration: You gather your confidence and diside to take a grip around some of the slacmites by the wall and walk on the wall. It is hard work but it seems to work surprisingly well. You suprise yourself sometimes. You gain 1 confidence.
+Minimum confidence: 4
+Confidence alateration: +1
+Next event: Dragons' hoard
 
 
 Name: Construction not completed (Help knight)
-Narration: c
+Narration: The next thing to be written.
 
 
 Name: Test if the dragon is asleep

@@ -307,6 +307,7 @@ namespace Text_based_game
                         possibleChoices.Add(choice);
                     }
                 }
+
                 int counter = 1;
                 foreach (Choice choice in possibleChoices)
                 {
@@ -334,6 +335,63 @@ namespace Text_based_game
                         {
                             Console.WriteLine("Try one of listed numbers.");
                         }
+                    }
+                    //Cheat display to endings
+                    else if (Regex.IsMatch(userInput, "endings"))
+                    {
+                        Console.WriteLine("Enter ending number");
+
+                        do
+                        {
+                            string cheat = Console.ReadLine();
+                            if (cheat == "1")
+                            {
+                                alarmLevel = 6;
+
+                            }
+                            else if (cheat == "2")
+                            {
+                                confidence = 5;
+                                alarmLevel = 5;
+                                inventory.Add("Escape");
+
+                            }
+                            else if (cheat == "3")
+                            {
+                                confidence = 0;
+                                alarmLevel = 5;
+                                inventory.Add("Escape");
+
+                            }
+                            else if (cheat == "4")
+                            {
+                                confidence = 5;
+                                alarmLevel = 0;
+                                inventory.Add("Escape");
+
+                            }
+                            else if (cheat == "5")
+                            {
+                                confidence = 0;
+                                alarmLevel = 0;
+                                inventory.Add("Escape");
+
+                            }
+                            else
+                            {
+                                Console.WriteLine("???");
+                            }
+
+                            ending = CheckGameOver(alarmLevel, confidence, storyline);
+                            if (ending != null)
+                            {
+                                HandleEnding(ending);
+                                Console.WriteLine();
+                            }
+
+                        } while (true);
+
+
                     }
                     else
                     {
@@ -385,8 +443,18 @@ namespace Text_based_game
                 }
                 else
                 {
+                    if (currentEvent.Name == "Dragons' hoard")
+                    {
+                        if (inventory.Contains("Underground tunnels"))
+                        {
+                            currentEvent = GetEvent("Pick exit");
+                            continue;
+                        }
+                    }
+
                     currentEvent = GetEvent(selectedChoice.NextEvent);
                 }
+
 
                 if (storyline.Contains("Hidding from the dragon"))
                 {

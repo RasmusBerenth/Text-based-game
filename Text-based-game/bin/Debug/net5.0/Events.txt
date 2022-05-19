@@ -23,7 +23,7 @@ Name: The main entrance
 Narration: As you travel through the forest hidding in the vegetation that the forest provide you spot the main entrance. As the forest end a massiv cave whith stalactites hanging from the celling like fangs. In front of the cave a small shrine has been raised and half a dussin people in dark robbes.
 
 Name: Path from the main entrance
-Narration: You have made it into the dragonslair the roof litterd with stalactites and gigant stalacmites growing from the floor, it looks like you heading towards the belly of the beast of literally and metaphorically. It seems like a bunch of the stalagmites has been brocken and carved a path. How will you make your way forward.
+Narration: You have made it into the dragons' lair the roof litterd with stalactites and gigant stalacmites growing from the floor, it looks like you heading towards the belly of the beast of literally and metaphorically. It seems like a bunch of the stalagmites has been brocken and carved a path. How will you make your way forward.
 
 Name: Right or left
 Narration: You find yourself at an intersection from the right you hear a faint clanging sound and only silence from the left. Either way you can see a faint glow like from a smoldering fire.
@@ -32,10 +32,28 @@ Name: Troll attack
 Narration: As you head down the right path making sure you are hidden amogst the shadows. Up ahead you see silhouettes that are moving, taking a closer look you see a troll with a hemp bag climbing out of a hole in the ground. Trolls being notoriously greedy, malicious and thick headed makes it likly that this one is going to be in the way. How should we deal with it?
 
 Name: The underground tunnel
-Narration: ut
+Narration: You have heard rumors of a tunnel network under the lair, old mines supposedly. However as you get to the tunnel entrance you spot several shapes moving around. Trolls, this might be troublesome or an oppretunity. Troll are somewhat notorious for being greedy and malicious creatures however not necessarily the most clever it is possible that you might be able to trick or lure them somehow. Choose your approch.
+
+Name: Path or stalacmites (underground tunnel)
+Narration: You are now traveling in dark, dank underground tunnels the troll infront of you guiding you threw the maze and you can't help to feel a little uneasy as you trying to memorize the route (RIGHT, LEFT, LEFT, RIGHT, RIGHT, RIGHT) you are taking in case you have to flee, this could be some kind of trap. But nothing the journey is supprisingly uneventfull and eventully you get into a large cave structure with stalagtiets hanging from the celling and stalacmits growing like trees. There seems to be a path carved out and you are informed which way leads to the treasure hoard by the troll before it leaves the other way most lead to the main entrance of the lair.
+
+Name: Pick exit
+Narration: You have the treasure time to get out of here, but how?
+
+Name: Escaping the trolls
+Narration: You slipp away and eventully you reach the opening to the tunnels. But now something is really bothering you the trolls seams to be on edge and there is several here now instead of the singular one that guided you here. It is good that you notice this or you woulden't have noticed the trolls moving behind you to attack. But you do and know it's time to run. You flee into the maze taking a wrong turn could spell disaster, what was the way again?
 
 Name: The secret door
-Narration: sd
+Narration: You have heard rumors of a secret door from back when the now dragons nest was a mine and that there had been the way into a secret vault back eons ago, but even if that story turned out to be true then that treasure would only have been added to yor target. You think that you have now located the door but when you arrive there is no door to be seen. 
+
+Name: Path or stalacmites (secret door)
+Narration: You open up the door and find a staircase leading down into the depths of the caven the dragon has made its lair. Eventully you get to a point where the cave opens up and you see a cave with stalactites hanging from the celling and stalacmites growing from the ground. A path has been carved out of the stalactites forest.
+
+Name: Right or left (secret door)
+Narration: You come to a cross section to the right you see a faint light in the distance to the left you hear a faint clanging sound.
+
+Name: Blocked path
+Narration: As you delve deeper into the lair you start seeing more and more damage to the stalacmites and the walls and floor start having long scortch marks. You get to point where the path is blocked of by several massive stalacmites. You could probebly climb over them but they seem fragile and you woulden't want to make to much noice by breaking them. 
 
 Name: Help knight
 Narration: hk
@@ -44,7 +62,7 @@ Name: Dragons' hoard
 Narration: The warm glow grows forcing you to relay on the stalagmites that has been growing ever larger the deeper in you have gotten. As you are traveling you start hearing deep breathing as you enter the central chamber from behind your stalagmite you see the massiv hoard of gold, silver and jewels on top of which lays the dragon seemingly asleep. Behind the dragon is a smoldering flame making the gold glimmer and making the dragons red scale form a menacing silhouettes. Know how to make yor approch?
 
 Name: Making an exit
-Narration: You leave the hoard behind you light of the flames in you back. All that is leaft is to get out whithout causing to much of a disturbance. Better put some pep in your step the dragon could wake up anytime now. Up ahead you spot something coming out of the ground, a troll!. You can't let it be in you way not when you are so close to the exit. What do you do?
+Narration: You leave the hoard behind you light of the flames in you back. All that is leaft is to get out whithout causing to much of a disturbance, better put some pep in your step the dragon could wake up anytime now. Up ahead you spot the glimering eyes of a troll looking out from a hole in the ground. You can't let it be in you way not when you are so close to the exit. What do you do?
 
 Name: Escape
 Narration: You can see the exit the main entrance open up you can see the forest reaching for the horizon. You feel the freach air in your lungs now all that is left is to spend you newly acquired treasure. 
