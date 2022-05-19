@@ -353,28 +353,28 @@ namespace Text_based_game
                             {
                                 confidence = 5;
                                 alarmLevel = 5;
-                                inventory.Add("Escape");
+                                storyline.Add("Escape");
 
                             }
                             else if (cheat == "3")
                             {
                                 confidence = 0;
                                 alarmLevel = 5;
-                                inventory.Add("Escape");
+                                storyline.Add("Escape");
 
                             }
                             else if (cheat == "4")
                             {
                                 confidence = 5;
                                 alarmLevel = 0;
-                                inventory.Add("Escape");
+                                storyline.Add("Escape");
 
                             }
                             else if (cheat == "5")
                             {
                                 confidence = 0;
                                 alarmLevel = 0;
-                                inventory.Add("Escape");
+                                storyline.Add("Escape");
 
                             }
                             else

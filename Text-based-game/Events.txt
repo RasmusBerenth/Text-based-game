@@ -56,7 +56,7 @@ Name: Blocked path
 Narration: As you delve deeper into the lair you start seeing more and more damage to the stalacmites and the walls and floor start having long scortch marks. You get to point where the path is blocked of by several massive stalacmites. You could probebly climb over them but they seem fragile and you woulden't want to make to much noice by breaking them. 
 
 Name: Help knight
-Narration: hk
+Narration: As you are hedding towards the clanging sound...
 
 Name: Dragons' hoard
 Narration: The warm glow grows forcing you to relay on the stalagmites that has been growing ever larger the deeper in you have gotten. As you are traveling you start hearing deep breathing as you enter the central chamber from behind your stalagmite you see the massiv hoard of gold, silver and jewels on top of which lays the dragon seemingly asleep. Behind the dragon is a smoldering flame making the gold glimmer and making the dragons red scale form a menacing silhouettes. Know how to make yor approch?
