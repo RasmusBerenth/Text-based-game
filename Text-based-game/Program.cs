@@ -366,7 +366,7 @@ namespace Text_based_game
                             else if (cheat == "4")
                             {
                                 confidence = 5;
-                                alarmLevel = 0;
+                                alarmLevel = 2;
                                 storyline.Add("Escape");
 
                             }
@@ -460,9 +460,14 @@ namespace Text_based_game
                         }
                     }
 
+                    if (currentEvent.Name == "The knight and the dragon")
+                    {
+                        alarmLevel = 5;
+                        storyline.Add("Dragon encounter");
+                    }
+
                     currentEvent = GetEvent(selectedChoice.NextEvent);
                 }
-
 
                 if (storyline.Contains("Hidding from the dragon"))
                 {

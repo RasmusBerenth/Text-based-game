@@ -1,5 +1,5 @@
 Name: Die a hero
-Narration: The dragon has eaten you, however your sacrefice has not been in vain as the knight sir Arnold will sing your praises for saving him from this ordeal.
+Narration: The dragon has eaten you, however, your sacrifice has not been in vain as the knight, sir Arnold, got out alive and will sing your praises for saving him from this ordeal.
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
@@ -7,7 +7,7 @@ Minimum alarm level: 6
 Event requirement: Help knight
 
 Name: Stolen treasure
-Narration: You eventully get capured and your vision goes dark. When you wake up your laing in a ditch whit now treasure to be seen. You make your way home with less money than you started.
+Narration: You eventually get captured by the trolls and your vision goes dark. When you wake up, you are laying in a ditch whit now treasure to be seen. You make your way home with less money than you started.
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
@@ -23,7 +23,7 @@ Minimum alarm level: 6
 Event requirement: 
 
 Name: Helper and theif
-Narration: No tresure, huh? Time will tell as you did save Arnold, mabey you two will be friends. Time will tell.
+Narration: Shared treasure is better than non, right? Since you did save sir Arnold, maybe you two will become friends one day. Only time will tell.
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
@@ -31,15 +31,15 @@ Minimum alarm level:
 Event requirement: Help knight, Escape via secret door
 
 Name: Dragonslayer
-Narration: You have slayed the dragon! You have gotten the entier tresuare for yourself. Luckely sir Arnold seems happy with you having taking the treasure as long as he gets all the credit for slaying the dragon, so all everything seems to have worked out.
+Narration: You have slain the dragon! The entire treasure is yours. Luckily sir Arnold seems happy with you having taken the treasure as long as he gets all the credit for slaying the dragon, so everything seems to have worked out.\nAs the years go by you find yourself less and less willing to part with the treasure and on occasion dark scales in your bed after nights when you have felt particularly itchy... 
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
 Minimum alarm level: 
 Event requirement: Help knight, Fight dragon
 
-Name: Live long enought the see yourself become the villian
-Narration: So you got the treasure... Joust so that you know the knight is 100% dead, if you two haden't meet he would have been alive. I mean the dragon killed him but only becouse left him. But who cares, right? Your rich now feel free to spend your ill gotten gains on anything you wish, I sincerly hope it was worth it...
+Name: Live long enough the see yourself become the villain
+Narration: So you got the treasure... Joust so that you know the knight is 100% dead, if you two hadn't met he would have been alive. I mean the dragon killed him but only because left him. But who cares, right? You are rich now feel free to spend your ill-gotten gains on anything you wish, I sincerely hope it was worth it...
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
@@ -47,7 +47,7 @@ Minimum alarm level:
 Event requirement: Help knight, Escape
 
 Name: Narrow escape
-Narration: So it turns out you can't trust trolls, o well you got must of the treasure left so you'll be fine you still at least half as rich as toes trolls and your not exactly in a possition to judge them for trying to get in on the tresure.
+Narration: So it turns out you can't trust trolls, o well you got most of the stolen treasure left so you'll be fine you are still at least half as rich as toes trolls, and you are not exactly in a position to judge them for trying to get in on the treasure.
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
@@ -55,7 +55,7 @@ Minimum alarm level:
 Event requirement: Escaping the trolls
 
 Name: How am I alive?
-Narration: Are you still alive? How? You must have almost died like a zillion times... Whatever, you got the treasure and thats what matters know you can retaier and live peasfully, not to offend but you clearly isen't cut out for this.
+Narration: Are you still alive? You have seen your life flash before your eyes more in this day than anyone should in their entire life... Whatever, you got the treasure and thats what matters know you can retire and live peacefully, not to offend but you clearly aren't cut out for this.
 Maximum confidence: 0
 Minimum confidence: 
 Maximum alarm level: 
@@ -63,7 +63,7 @@ Minimum alarm level: 5
 Event requirement: Escape
 
 Name: Flying by the seat of your pants
-Narration: You managed to get out alive and probebly almost died at more than one occation however your confidence never faulterd and the treasure is yours. We should do this again sometime.
+Narration: You managed to get out alive and probably almost died on more than one occasion however your confidence never faltered and the treasure is yours. We should do this again sometime.
 Maximum confidence: 
 Minimum confidence: 5
 Maximum alarm level: 
@@ -71,7 +71,7 @@ Minimum alarm level: 5
 Event requirement: Escape
 
 Name: Lucky break
-Narration: You have succesfully retrived the treasure. There were some close calls... How are you kidding? You got lucky. Regardless of this the treasure is yours.
+Narration: You have successfully retrieved the treasure. There were some close calls... How are you kidding? You got lucky. Regardless of this, the treasure is yours.
 Maximum confidence: 0
 Minimum confidence: 
 Maximum alarm level: 
@@ -79,7 +79,7 @@ Minimum alarm level: 0
 Event requirement: Escape
 
 Name: A cunning thief
-Narration: You have succesfully made it through the dragons lair. Your cunning made your confidence grow and got your treasure without gaining any unwanted attansion. Truly you are a master of your craft.
+Narration: You have successfully made it through the dragons' lair. Your cunning made your confidence grow and got your treasure without gaining any unwanted attention. Truly you are a master of your craft.
 Maximum confidence: 
 Minimum confidence: 5
 Maximum alarm level: 0
@@ -87,7 +87,7 @@ Minimum alarm level:
 Event requirement: Escape
 
 Name: Rags to riches
-Narration: You got the treasure, you rich know anything you want can be yours. Sure you stumbled and you werent allways fully confident in your desisions. But forget about all that becouse you joust went from a poor thief form nowhere to being rich enough to by your own fully furniched and staffed castle or anything else you might want. Long live the dragons and there hoards of gold, and the thiefs bold enough to steal from them!
+Narration: You got the treasure, you rich know anything you want can be yours. Sure you stumbled and you weren't always fully confident in your decisions. But forget about all that because you joust went from a poor thief form nowhere to being rich enough to buy your own fully furnished and staffed castle or anything else you might want. Long live the dragons and their hoards of gold, and the thieves bold enough to steal from them!
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
