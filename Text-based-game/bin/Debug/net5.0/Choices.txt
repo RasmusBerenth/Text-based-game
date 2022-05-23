@@ -14,8 +14,9 @@ Next event: The chase
 
 
 Name: Hide amognst the stalagmites
-Narration: You hide amongst the stalgmites and for a moment it looks as if you have lost the dragon. You can hear it tracking, you realize too late that it is following your sent, once each reaches the cluster of stalagmites your hiding amongst your world has consumed by its firey breath.\n...\nYou gain 1 alarm level.\n...
+Narration: You hide amongst the stalgmites and for a moment it looks as if you have lost the dragon. You can hear it tracking, you realize too late that it is following your sent, once each reaches the cluster of stalagmites your hiding amongst your world has consumed by its firey breath. You gain 1 alarm level.
 Alarm level alteration: +1
+Next event: The end
 
 Name: Hide in underground tunnels
 Narration: You find an opening in the ground, there should be a network of underground tunnels. You jump down one and is almost overwhelmed by the stench. Navigating the tunnels you can hear the dragon rampaging and on more than one occasion you feel the temperature rise but eventually it seems to calm down. You find another way out of the tunnels and keep walking onwards.
@@ -35,8 +36,8 @@ Confidence alteration: +1
 Minimum confidence: 4
 Next event: Escape the dragon
 
-Name: Parkour
-Narration: You decide to jump off the wall and use the momentum to launch yourself over the dragon. You jump and launch yourself and land on top of the dragon and is now hanging on for dear life before it eventually shakes you off. The air gets shot out of your lungs,and as you are trying to catch your breath the dragons' fangs come down on you...\nYou gain 1 alarm level.\n...
+Name: Parkour!
+Narration: You decide to jump off the wall and use the momentum to launch yourself over the dragon. You jump and launch yourself and land on top of the dragon and is now hanging on for dear life before it eventually shakes you off. The air gets shot out of your lungs,and as you are trying to catch your breath the dragons' fangs come down on you. You gain 1 alarm level.
 Alarm level alteration: +1
 Next event: The end
 
@@ -47,7 +48,7 @@ Next event: Escape the dragon
 
 
 Name: Hide amongst some of the stalagmites by the entrance
-Narration: You try hiding amogst the stalcmites unfortunately it doesn't take the dragon long to find you and takes a final breath for you...\nYou gain 1 alarm level\n...
+Narration: You try hiding amogst the stalcmites unfortunately it doesn't take the dragon long to find you and takes a final breath for you. You gain 1 alarm level.
 Alarm level alteration: +1
 Next event: The end
 
@@ -56,7 +57,7 @@ Narration: You jump into the shrine and hide amongst the sacrifices that have be
 Next event: Escape
 
 Name: Hide in the forest
-Narration: You run for the forest, unfortunately, you don't make it and the dragon comes out of its lair and with one breath spews out a stream of fire...\nYou gain 1 alarm level\n...
+Narration: You run for the forest, unfortunately, you don't make it and the dragon comes out of its lair and with one breath spews out a stream of fire. You gain 1 alarm level.
 Alarm level alteration: +1
 Next event: The end
 
@@ -127,7 +128,7 @@ Special item requirement: Gold coins
 Next event: Path from the main entrance
 
 Name: Just walk past them
-Narration: You watch the worshippers for a while and they don't seem especially dangerous. You take a deep breath and decide to take your chances and walk up to them,with no reaction you walk past them, seem like some of them look at you, and then return to thier prayers. Thinking about it they are probably just locals who want to stay out of trouble. Things have been pretty easy so far and your confidence grows. Gain 2 confidence
+Narration: You watch the worshippers for a while and they don't seem especially dangerous. You take a deep breath and decide to take your chances and walk up to them,with no reaction you walk past them, seem like some of them look at you, and then return to thier prayers. Thinking about it they are probably just locals who want to stay out of trouble. Things have been pretty easy so far and your confidence grows. Gain 2 confidence.
 Minimum confidence: 3
 Confidence alteration: +2
 Next event: Path from the main entrance
@@ -241,12 +242,12 @@ Next event: The end
 
 
 Name: No use, let's move to another entrance tomorrow.
-Narration: It is getting late and it would be better to rest and take another rather than go in tired, better to steal from a dragon when rested even if you are somewhat disepointed that there was no secret door. You lose 1 confidence.\n\nAs you set up camp the last rays of the day hit the wall making your shadow your only companion. As those rays of light hit the wall however faint outlines of a door. The secret door! You spring into action forget resting you are a genius. You gain 1 confidence. You gain 1 alarm level.
+Narration: It is getting late and it would be better to rest and take another rather than go in tired, better to steal from a dragon when rested even if you are somewhat disepointed that there was no secret door. You lose 1 confidence. As you set up camp the last rays of the day hit the wall making your shadow your only companion. As those rays of light hit the wall however faint outlines of a door. The secret door! You spring into action forget resting you are a genius. You gain 1 confidence. You gain 1 alarm level...
 Alarm level alteration: +1
 Next event: Path or stalagmites (secret door)
 
 Name: Try to locate the door based on plant growth
-Narration: You attempt to find the door based on where the plants have grown the most. This does not work it all looks the same to you and you end up wasting the day away until dusk comes and the last lights of the day show you where the door is. You weren't even close. You lose 1 confidence and you gain 1 alarm level.
+Narration: You attempt to find the door based on where the plants have grown the most. This does not work it all looks the same to you and you end up wasting the day away until dusk comes and the last lights of the day show you where the door is. You weren't even close. You lose 1 confidence. You gain 1 alarm level...
 Confidence alteration: -1
 Alarm level alteration: +1
 Next event: Path or stalagmites (secret door)
@@ -268,7 +269,7 @@ Name: Travelling between the stalagmites
 Narration: Travelling between the stalagmites is cumbersome and you can't help but break some of the smaller stalagmites which are surprisingly fragile you might as well put them in your pockets. However, while it is hard moving between the stalagmites the cover it provides makes you feel more confident. You gain 1 confidence.
 Confidence alteration: +1
 Special item gained: Stalagmite pieces
-Next event: Right or left (secret door) 
+Next event: Right or left (secret door)
 
 Name: Take the path
 Narration: Traveling on the path while convenient makes you feel exposed like you could be spotted from anywhere. You lose 1 confidence.
@@ -281,7 +282,7 @@ Narration: You take the right path. You gain 1 confidence.
 Confidence alteration: +1
 Next event: Blocked path
 
-Name: Left 
+Name: Left
 Narration: You take the left path.
 Next event: Help knight
 
@@ -305,7 +306,7 @@ Next event: Dragons' hoard
 
 
 Name: Say hello to whatever is behind the boulder.
-Narration: You sneak up to the boulder and whisper a hello. The clanging stops.\n"Where are you foul demon, come out and face me! I sir Arnold the brave shall be victorious" bellows a man's voice his voice echoing through the entire cave.\nAny attempts at reasoning from now on fail the voice seems convinced some demon is trying to trick him and is making an alarming amount of noice doing so. You gain 1 alarm level.
+Narration: You sneak up to the boulder and whisper a hello. The clanging stops. "Where are you foul demon, come out and face me! I sir Arnold the brave shall be victorious" bellows a man's voice his voice echoing through the entire cave. Any attempts at reasoning from now on fail the voice seems convinced some demon is trying to trick him and is making an alarming amount of noice doing so. You gain 1 alarm level.
 Alarm level alteration: +1
 Special item gained: Knights mark
 Next event: Empty hoard
@@ -446,7 +447,7 @@ Narration: You throw some of the stalagmite pieces on the dragon from your hidin
 Alarm level alteration: +1
 Special item gained: Treasure
 Special item requirement: Stalagmite pieces
-Next event: Making an exit 
+Next event: Making an exit
 
 Name: Move from stalagmite to stalagmite stealing treasure as you go
 Narration: You start moving between the stalagmites stealing from the outer edges of the hoard. You manage to get a small treasure but you can't help but feel like you are playing it a bit safe. You lose 1 confidence.
@@ -502,7 +503,7 @@ Alarm level alteration: -1
 Next event: Escape
 
 Name: Bribe the troll
-Narration: You have plenty of treasure sharing some to get out of might not be ideal but it is better than facing the dragon. So you walk up to the troll and take a handful of jewelry giving it to the troll and motioning for it to be quiet
+Narration: You have plenty of treasure sharing some to get out of might not be ideal but it is better than facing the dragon. So you walk up to the troll and take a handful of jewelry giving it to the troll and motioning for it to be quiet.
 Confidence alteration: -1
 Next event: Escape
 

@@ -89,4 +89,4 @@ Name: Escape
 Narration: You can see the exit the main entrance open up you can see the forest reaching for the horizon. You feel the fresh air in your lungs now all that is left is to spend your newly acquired treasure. 
 
 Name: The end
-Narration: end off the game
+Narration: You are not suppose to be here

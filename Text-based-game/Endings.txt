@@ -39,7 +39,7 @@ Minimum alarm level:
 Event requirement: Help knight, Fight dragon
 
 Name: Live long enough the see yourself become the villain
-Narration: So you got the treasure... Joust so that you know the knight is 100% dead, if you two hadn't met he would have been alive. I mean the dragon killed him but only because left him. But who cares, right? You are rich now feel free to spend your ill-gotten gains on anything you wish, I sincerely hope it was worth it...
+Narration: So you got the treasure... Just so that you know the knight is 100% dead, if you two hadn't met he would have been alive. I mean the dragon killed him but only because left him. But who cares, right? You are rich now feel free to spend your ill-gotten gains on anything you wish, I sincerely hope it was worth it...
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
@@ -74,8 +74,8 @@ Name: Lucky break
 Narration: You have successfully retrieved the treasure. There were some close calls... How are you kidding? You got lucky. Regardless of this, the treasure is yours.
 Maximum confidence: 0
 Minimum confidence: 
-Maximum alarm level: 
-Minimum alarm level: 0
+Maximum alarm level: 0
+Minimum alarm level: 
 Event requirement: Escape
 
 Name: A cunning thief
@@ -87,7 +87,7 @@ Minimum alarm level:
 Event requirement: Escape
 
 Name: Rags to riches
-Narration: You got the treasure, you rich know anything you want can be yours. Sure you stumbled and you weren't always fully confident in your decisions. But forget about all that because you joust went from a poor thief form nowhere to being rich enough to buy your own fully furnished and staffed castle or anything else you might want. Long live the dragons and their hoards of gold, and the thieves bold enough to steal from them!
+Narration: You got the treasure, you rich know anything you want can be yours. Sure you stumbled and you weren't always fully confident in your decisions. But forget about all that because you just went from a poor thief form nowhere to being rich enough to buy your own fully furnished and staffed castle or anything else you might want. Long live the dragons and their hoards of gold, and the thieves bold enough to steal from them!
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 

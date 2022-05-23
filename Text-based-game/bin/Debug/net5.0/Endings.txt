@@ -74,8 +74,8 @@ Name: Lucky break
 Narration: You have successfully retrieved the treasure. There were some close calls... How are you kidding? You got lucky. Regardless of this, the treasure is yours.
 Maximum confidence: 0
 Minimum confidence: 
-Maximum alarm level: 
-Minimum alarm level: 0
+Maximum alarm level: 0
+Minimum alarm level: 
 Event requirement: Escape
 
 Name: A cunning thief

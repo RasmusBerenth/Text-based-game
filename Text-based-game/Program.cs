@@ -13,6 +13,7 @@ namespace Text_based_game
         public int MinimumConfidence = 0;
         public int MaximumConfidence = Int32.MaxValue;
         public int MinimumAlarmLevel = 0;
+        public int MaximumAlarmLevel = 6;
     }
     class Event
     {
@@ -37,6 +38,25 @@ namespace Text_based_game
         static List<Event> events = new List<Event>();
         static List<Ending> endings = new List<Ending>();
 
+        static void PrintScript(string text)
+        {
+            string[] words = text.Split(" ");
+            foreach (string word in words)
+            {
+                int totalWidth = Console.WindowWidth - 4;
+                int cursourPosition = Console.CursorLeft;
+                int charactersLeft = totalWidth - cursourPosition;
+
+                if (charactersLeft < word.Length)
+                {
+                    Console.WriteLine();
+                }
+
+                Console.Write($"{word} ");
+                System.Threading.Thread.Sleep(40);
+            }
+            Console.WriteLine();
+        }
         //A method which checks if the game is over.
         static Ending CheckGameOver(int alarmLevel, int confidence, List<string> storyline)
         {
@@ -53,6 +73,11 @@ namespace Text_based_game
                 }
 
                 if (alarmLevel < ending.MinimumAlarmLevel)
+                {
+                    continue;
+                }
+
+                if (alarmLevel > ending.MaximumAlarmLevel)
                 {
                     continue;
                 }
@@ -85,7 +110,7 @@ namespace Text_based_game
         static void HandleEnding(Ending ending)
         {
             Console.WriteLine(ending.Name);
-            Console.WriteLine(ending.Narration);
+            PrintScript(ending.Narration);
         }
 
         //Gets the next event.
@@ -120,6 +145,8 @@ namespace Text_based_game
         }
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
+
             //Initialization
             //Reading files and then splitting them.
             string eventsPath = "Events.txt";
@@ -144,7 +171,7 @@ namespace Text_based_game
                 //Using regex to find individual items in the choice file.
                 foreach (string choiceInfoText in choicesPerEvent)
                 {
-                    Match choiceInfo = Regex.Match(choiceInfoText, "Name: (.*)\\r\\nNarration: (.*)");
+                    Match choiceInfo = Regex.Match(choiceInfoText, "Name: (.*)\\r\\nNarration: (.*)\\r");
 
                     //Choice class definition.
                     var choice = new Choice();
@@ -256,6 +283,13 @@ namespace Text_based_game
                     ending.MinimumAlarmLevel = intEndMinAlarmLevelInfo;
                 }
 
+                Match endMaxAlarmLevelInfo = Regex.Match(endGroup, "Maximum alarm level: ([^\\r]+)");
+                if (endMaxAlarmLevelInfo.Success)
+                {
+                    int intEndMaxAlarmLevelInfo = Int32.Parse(endMaxAlarmLevelInfo.Groups[1].Value);
+                    ending.MaximumAlarmLevel = intEndMaxAlarmLevelInfo;
+                }
+
 
                 endings.Add(ending);
             }
@@ -273,9 +307,12 @@ namespace Text_based_game
             var inventory = new List<string>();
 
             //Game intro.
-            Console.WriteLine("A lone thief has set up camp in a forest. Less than a day away has a dragon made its lair.\nThe thief has gathered what confidence they could find and has made it this far...\nWill their confidence grow or fallter? Will the dragon spot them or will they go unseen...\nOnly time will tell...");
-            Console.WriteLine("\nPress any button to commence with the theft.");
-            Console.ReadLine();
+            PrintScript("A lone thief has set up camp in a forest. Less than a day away has a dragon made its lair. The thief has gathered what confidence they could find and has made it this far... ");
+            PrintScript("Will their confidence grow or fallter? Will the dragon spot them or will they go unseen... ");
+            PrintScript("Only time will tell...");
+            Console.WriteLine();
+            PrintScript("Press any button to commence with the theft.");
+            Console.ReadKey(true);
 
             Event currentEvent = events[4];
 
@@ -295,10 +332,15 @@ namespace Text_based_game
                     break;
                 }
 
+                //TODO: Confidence and alarm color
+                string confidenceColor = $"Confidence:{confidence}";
+                string alarmLevelColor = $"Alarm Level:{alarmLevel}";
+
+
                 //Clearing previous text and output UI.
                 Console.Clear();
                 Console.WriteLine($"Confidence:{confidence} Alarm Level:{alarmLevel}\n");
-                Console.WriteLine(currentEvent.Narration);
+                PrintScript(currentEvent.Narration);
                 var possibleChoices = new List<Choice>();
                 foreach (Choice choice in currentEvent.Choices)
                 {
@@ -311,7 +353,7 @@ namespace Text_based_game
                 int counter = 1;
                 foreach (Choice choice in possibleChoices)
                 {
-                    Console.WriteLine($"{counter}. {choice.Name}");
+                    PrintScript($"{counter}. {choice.Name}");
                     counter++;
                 }
 
@@ -320,7 +362,8 @@ namespace Text_based_game
 
                 do
                 {
-                    userInput = Console.ReadLine();
+                    ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                    userInput = keyInfo.KeyChar.ToString();
 
                     if (Regex.IsMatch(userInput, "\\d"))
                     {
@@ -333,11 +376,11 @@ namespace Text_based_game
                         }
                         catch (ArgumentOutOfRangeException)
                         {
-                            Console.WriteLine("Try one of listed numbers.");
+                            PrintScript("Try one of listed numbers.");
                         }
                     }
                     //Cheat display to endings
-                    else if (Regex.IsMatch(userInput, "endings"))
+                    else if (Regex.IsMatch(userInput, "e"))
                     {
                         Console.WriteLine("Enter ending number");
 
@@ -352,21 +395,21 @@ namespace Text_based_game
                             else if (cheat == "2")
                             {
                                 confidence = 5;
-                                alarmLevel = 5;
+                                alarmLevel = 3;
                                 storyline.Add("Escape");
 
                             }
                             else if (cheat == "3")
                             {
                                 confidence = 0;
-                                alarmLevel = 5;
+                                alarmLevel = 3;
                                 storyline.Add("Escape");
 
                             }
                             else if (cheat == "4")
                             {
                                 confidence = 5;
-                                alarmLevel = 2;
+                                alarmLevel = 0;
                                 storyline.Add("Escape");
 
                             }
@@ -376,6 +419,12 @@ namespace Text_based_game
                                 alarmLevel = 0;
                                 storyline.Add("Escape");
 
+                            }
+                            else if (cheat == "6")
+                            {
+                                confidence = 3;
+                                alarmLevel = 3;
+                                inventory.Add("Escape");
                             }
                             else
                             {
@@ -395,14 +444,15 @@ namespace Text_based_game
                     }
                     else
                     {
-                        Console.WriteLine($"{userInput} is not an option. Try again!");
+                        PrintScript("Try one of the listed nummbers.");
                     }
 
                 } while (true);
 
                 //Display choice
-                Console.WriteLine(selectedChoice.Narration);
-                Console.ReadLine();
+                Console.WriteLine();
+                PrintScript(selectedChoice.Narration);
+                Console.ReadKey(true);
 
                 confidence += selectedChoice.ConfidenceAlteration;
                 if (confidence < 0)
