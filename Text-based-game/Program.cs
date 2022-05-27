@@ -168,7 +168,6 @@ namespace Text_based_game
             string titleScreenPath = "Fortune favor the bold title screen.txt";
             string titleScreen = File.ReadAllText(titleScreenPath);
 
-            Console.Clear();
             //Color for title screen
             foreach (char charackter in titleScreen)
             {
