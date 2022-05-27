@@ -146,9 +146,13 @@ namespace Text_based_game
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
+            Console.WindowWidth = 84;
+            Console.WindowHeight = 27;
+            Console.BufferWidth = Console.WindowWidth;
+            Console.BufferHeight = Console.WindowHeight;
 
             //Initialization
-            //Reading files and then splitting them.
+            //Reading files and then splitting them when needed.
             string eventsPath = "Events.txt";
             string eventsText = File.ReadAllText(eventsPath);
             string[] eventGroups = eventsText.Split("\r\n\r\n");
@@ -160,6 +164,28 @@ namespace Text_based_game
             string endPath = "Endings.txt";
             string endText = File.ReadAllText(endPath);
             string[] endGroups = endText.Split("\r\n\r\n");
+
+            string titleScreenPath = "Fortune favor the bold title screen.txt";
+            string titleScreen = File.ReadAllText(titleScreenPath);
+
+            Console.Clear();
+            //Color for title screen
+            foreach (char charackter in titleScreen)
+            {
+                string charackterString = Convert.ToString(charackter);
+                Match colorMatch = Regex.Match(charackterString, "\\/(\\d+)");
+                int titleColor = Convert.ToInt32(colorMatch.Groups[1].Value);
+                ConsoleColor color = (ConsoleColor)titleColor;
+
+                if (colorMatch.Success)
+                {
+                    Console.ForegroundColor = color;
+                }
+
+                Console.Write(charackter);
+            }
+            Console.ReadKey();
+
 
             //Initializ choices and events.
             for (int eventIndex = 0; eventIndex < eventGroups.Length; eventIndex++)
@@ -306,12 +332,19 @@ namespace Text_based_game
             //List of special item player has gained.
             var inventory = new List<string>();
 
+            //TODO: Colors for titlescreen ev. others
+            //Display titlescreen
+            //Console.Clear();
+            //Console.Write(titleScreen);
+            //Console.ReadKey();
+
             //Game intro.
-            PrintScript("A lone thief has set up camp in a forest. Less than a day away has a dragon made its lair. The thief has gathered what confidence they could find and has made it this far... ");
-            PrintScript("Will their confidence grow or fallter? Will the dragon spot them or will they go unseen... ");
+            Console.Clear();
+            PrintScript("A lone thief has set up camp in a forest. Less than a day away has a dragon made its lair. The thief has gathered what confidence they could find and has made it this far...");
+            PrintScript("Will their confidence grow or fallter? Will the dragon spot them or will they go unseen...");
             PrintScript("Only time will tell...");
             Console.WriteLine();
-            PrintScript("Press any button to commence with the theft.");
+            PrintScript("Press enter to commence with the theft.");
             Console.ReadKey(true);
 
             Event currentEvent = events[4];
@@ -324,18 +357,13 @@ namespace Text_based_game
                     currentEvent = events[0];
                 }
 
-                //TODO:Check ending
+                //Check ending
                 Ending ending = CheckGameOver(alarmLevel, confidence, storyline);
                 if (ending != null)
                 {
                     HandleEnding(ending);
                     break;
                 }
-
-                //TODO: Confidence and alarm color
-                string confidenceColor = $"Confidence:{confidence}";
-                string alarmLevelColor = $"Alarm Level:{alarmLevel}";
-
 
                 //Clearing previous text and output UI.
                 Console.Clear();
