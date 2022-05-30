@@ -112,7 +112,6 @@ namespace Text_based_game
             Console.WriteLine(ending.Name);
             PrintScript(ending.Narration);
         }
-
         //Gets the next event.
         static Event GetEvent(string name)
         {
@@ -318,14 +317,10 @@ namespace Text_based_game
                             ConsoleColor color = (ConsoleColor)titleColor;
                             Console.ForegroundColor = color;
                         }
-
                         Console.Write(colorMatch.Groups[2].Value);
                     }
-
                 }
                 Console.WriteLine();
-
-
             }
             Console.ReadKey();
 
@@ -341,8 +336,6 @@ namespace Text_based_game
             var storyline = new List<string>();
             //List of special item player has gained.
             var inventory = new List<string>();
-
-
 
             //Game intro.
             Console.Clear();
@@ -467,7 +460,6 @@ namespace Text_based_game
                                 return;
                             }
 
-
                             ending = CheckGameOver(alarmLevel, confidence, storyline);
                             if (ending != null)
                             {
@@ -475,10 +467,7 @@ namespace Text_based_game
                                 Console.WriteLine();
                             }
 
-
                         } while (true);
-
-
                     }
                     else
                     {
@@ -568,8 +557,6 @@ namespace Text_based_game
                 }
 
             } while (true);
-
-
         }
     }
 }
