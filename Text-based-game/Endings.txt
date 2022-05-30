@@ -31,7 +31,7 @@ Minimum alarm level:
 Event requirement: Help knight, Escape via secret door
 
 Name: Dragonslayer
-Narration: You have slain the dragon! The entire treasure is yours. Luckily sir Arnold seems happy with you having taken the treasure as long as he gets all the credit for slaying the dragon, so everything seems to have worked out.\nAs the years go by you find yourself less and less willing to part with the treasure and on occasion dark scales in your bed after nights when you have felt particularly itchy... 
+Narration: You have slain the dragon! The entire treasure is yours. Luckily sir Arnold seems happy with you having taken the treasure as long as he gets all the credit for slaying the dragon, so everything seems to have worked out. As the years go by you find yourself less and less willing to part with the treasure and on occasion dark scales in your bed after nights when you have felt particularly itchy... 
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 

@@ -74,7 +74,7 @@ Name: The knight and the dragon
 Narration: You hurry back, now speed is now of the essence. You traverse the cave like a shadow eventually you spot the knight, good thing he has such a colorful outfit. More concerning is the massive dragon that he appears to be fighting. He might be doing better than you thought he would but this is a losing battle. He already looks tired. Warning your alarm level will now be five your next mistake will be your last!
 
 Name: Escape via secret door
-Narration: Hiding behind the stalagmite cluster you can see the dragon searching for you and it won't be long until it finds you.\n"You have saved me, I really thought I had him this time but alas this fearsome creature is too much for me!" he exclaims in a hushed tone, your just happy he has enough sense to stay quiet. That being said you need to get out of here, fast!
+Narration: Hiding behind the stalagmite cluster you can see the dragon searching for you and it won't be long until it finds you. "You have saved me, I really thought I had him this time but alas this fearsome creature is too much for me!" he exclaims in a hushed tone, your just happy he has enough sense to stay quiet. That being said you need to get out of here, fast!
 
 Name: Fight dragon
 Narration: You and sir Arnold start fighting the dragon. It goes pretty well until you learn that it has merely been playing with you as it wipes out the legs from under you and sir Arnold with one movement of its tail causing him to let go of his sword. As it starts inhaling you realize you only have one more move.

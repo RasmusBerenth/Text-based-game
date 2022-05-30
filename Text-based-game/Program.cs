@@ -145,6 +145,7 @@ namespace Text_based_game
         }
         static void Main(string[] args)
         {
+            Console.Clear();
             Console.CursorVisible = false;
             Console.WindowWidth = 84;
             Console.WindowHeight = 27;
@@ -167,24 +168,7 @@ namespace Text_based_game
 
             string titleScreenPath = "Fortune favor the bold title screen.txt";
             string titleScreen = File.ReadAllText(titleScreenPath);
-
-            //Color for title screen
-            foreach (char charackter in titleScreen)
-            {
-                string charackterString = Convert.ToString(charackter);
-                Match colorMatch = Regex.Match(charackterString, "\\/(\\d+)");
-                int titleColor = Convert.ToInt32(colorMatch.Groups[1].Value);
-                ConsoleColor color = (ConsoleColor)titleColor;
-
-                if (colorMatch.Success)
-                {
-                    Console.ForegroundColor = color;
-                }
-
-                Console.Write(charackter);
-            }
-            Console.ReadKey();
-
+            string[] titleLines = titleScreen.Split("\r\n");
 
             //Initializ choices and events.
             for (int eventIndex = 0; eventIndex < eventGroups.Length; eventIndex++)
@@ -320,6 +304,33 @@ namespace Text_based_game
             }
 
 
+            //Display title screen with color
+            foreach (string line in titleLines)
+            {
+                MatchCollection colorMatches = Regex.Matches(line, "(?:\\*(\\d{1,2})\\*|^)(.*?)(?=\\*\\d{1,2}\\*|$)");
+                foreach (Match colorMatch in colorMatches)
+                {
+                    if (colorMatch.Success)
+                    {
+                        if (colorMatch.Groups[1].Success)
+                        {
+                            int titleColor = Convert.ToInt32(colorMatch.Groups[1].Value);
+                            ConsoleColor color = (ConsoleColor)titleColor;
+                            Console.ForegroundColor = color;
+                        }
+
+                        Console.Write(colorMatch.Groups[2].Value);
+                    }
+
+                }
+                Console.WriteLine();
+
+
+            }
+            Console.ReadKey();
+
+            Console.ForegroundColor = ConsoleColor.White;
+
             //Gameplay
             int confidence = 1;
             int alarmLevel = 0;
@@ -331,11 +342,7 @@ namespace Text_based_game
             //List of special item player has gained.
             var inventory = new List<string>();
 
-            //TODO: Colors for titlescreen ev. others
-            //Display titlescreen
-            //Console.Clear();
-            //Console.Write(titleScreen);
-            //Console.ReadKey();
+
 
             //Game intro.
             Console.Clear();
@@ -368,6 +375,7 @@ namespace Text_based_game
                 Console.Clear();
                 Console.WriteLine($"Confidence:{confidence} Alarm Level:{alarmLevel}\n");
                 PrintScript(currentEvent.Narration);
+                Console.WriteLine();
                 var possibleChoices = new List<Choice>();
                 foreach (Choice choice in currentEvent.Choices)
                 {
@@ -456,7 +464,9 @@ namespace Text_based_game
                             else
                             {
                                 Console.WriteLine("???");
+                                return;
                             }
+
 
                             ending = CheckGameOver(alarmLevel, confidence, storyline);
                             if (ending != null)
@@ -464,6 +474,7 @@ namespace Text_based_game
                                 HandleEnding(ending);
                                 Console.WriteLine();
                             }
+
 
                         } while (true);
 
@@ -491,6 +502,11 @@ namespace Text_based_game
                 if (alarmLevel < 0)
                 {
                     alarmLevel = 0;
+                }
+
+                if (alarmLevel > 6)
+                {
+                    alarmLevel = 6;
                 }
 
                 //Adds found item to inventory.
@@ -537,7 +553,7 @@ namespace Text_based_game
                         }
                     }
 
-                    if (currentEvent.Name == "The knight and the dragon")
+                    if (currentEvent.Name == "Empty hoard" || currentEvent.Name == "Empty hoard with knight")
                     {
                         alarmLevel = 5;
                         storyline.Add("Dragon encounter");
@@ -552,6 +568,8 @@ namespace Text_based_game
                 }
 
             } while (true);
+
+
         }
     }
 }

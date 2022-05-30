@@ -207,7 +207,7 @@ Next event: Path or stalagmites (underground tunnel)
 Name: Travelling between the stalagmites
 Narration: Travelling between the stalagmites is cumbersome and you can't help but break some of the smaller stalagmites which are surprisingly fragile, you might as well put them in your pockets. However, while it is hard moving between the stalagmites the cover it provides makes you feel more confident. You gain 1 confidence.
 Confidence alteration: +1
-Special item gained: stalagmite pieces
+Special item gained: Stalagmite pieces
 Next event: Dragons' hoard
 
 Name: Take the path
@@ -331,7 +331,7 @@ Next event: Jailbreak
 
 Name: Ask him to stop making noice
 Narration: You tell the knight to be quiet. He stops swinging his sword, looks around and then yells "who is there!" before he looks up and sees you and you motion for him to be quiet. He seems to quiet down, "Do you mind getting rid of this boulder it seems it won't budge?" he says in a lowered voice and hands you a spear. You gain 1 confidence.
-Confidene alteration: +1
+Confidence alteration: +1
 Special item gained: Spear
 Next event: Jailbreak
 
@@ -400,8 +400,8 @@ Next event: Fight dragon
 
 
 Name: Move towards the exit and hope the dragon doesn't notice you
-Narration: You start heading towards the exit to the lair you get quite far only to end up being ambushed by the dragon...
-Alarm level alteration: +2
+Narration: You start heading towards the exit of the lair you get quite far only to end up being ambushed by the dragon... You gain 1 alarm level.
+Alarm level alteration: +1
 Next event: The end
 
 Name: Try finding a permanent hiding spot
@@ -409,12 +409,12 @@ Narration: Best to play it save you creep along to find a crack in the wall even
 Next event: The end
 
 Name: You injured its legs, just run for it
-Narration: It can't move that fast right... Well, it can, the injury doesn't seem to hinder it in any meaningful way and it catches you as fast as ever. You gain 2 alarm levels.
-Alarm level alteration: +2
+Narration: It can't move that fast right... Well, it can, the injury doesn't seem to hinder it in any meaningful way and it catches you as fast as ever. You gain 1 alarm levels.
+Alarm level alteration: +1
 Next event: The end
 
-Name: Create tummies as a distraction.
-Narration: You dress up to human-sized stalagmites in your and the knights' clothes. Sir Arnold protest at first but since you seem confident that this will work he goes along with it. As you are heading towards the exit you find the way to the secret door lucky you since, judging by the fire, the dragon seems to have found your dummies.
+Name: Create dummies as a distraction.
+Narration: You dress up to human-sized stalagmites in your and the knights' clothes. Sir Arnold protest at first but since you seem confident that this will work he goes along with it. As you are heading towards the exit you find the way to the secret door lucky you since, judging by the fire, the dragon seems to have found your dummies. You lose 1 alarm level.
 Minimum confidence: 5
 Alarm level alteration: -1
 Next event: The end
