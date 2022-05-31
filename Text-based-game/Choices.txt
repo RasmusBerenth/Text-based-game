@@ -99,7 +99,7 @@ Next event: Knights camp
 
 
 Name: Loot the camp
-Narration: Sneaking up to the tent being careful not to make any sound, you peak into the tent. The tent is mostly empty exception for a makeshift bed with a bag beside it. Looking in the bag you find a coin pouch and a fancy-looking chalice as well as some bread whith you eat. You feel more confident having found tressure this early. You gain 1 confidence.
+Narration: Sneaking up to the tent being careful not to make any sound, you peak into the tent. The tent is mostly empty exception for a makeshift bed with a bag beside it. Looking in the bag you find a coin pouch and a fancy-looking chalice as well as some bread which you eat. You feel more confident having found tressure this early. You gain 1 confidence.
 Confidence alteration: +1
 Special item gained: Gold coins
 
@@ -228,7 +228,7 @@ Next event: Making an exit
 
 Name: RIGHT, LEFT, LEFT, LEFT, RIGHT, RIGHT
 Narration: You run dodging the attacks from the trolls thier tiny eyes glimmering in the dark, you keep running for hours being completely lost.
-Alarm level alteration: 5
+Alarm level alteration: 6
 Next event: The end
 
 Name: RIGHT, LEFT, LEFT, RIGHT, RIGHT, RIGHT
@@ -237,7 +237,7 @@ Next event: The end
 
 Name: LEFT, RIGHT, LEFT, LEFT, RIGHT, LEFT, LEFT
 Narration: You run dodging the attacks from the trolls thier tiny eyes glimmering in the dark, you keep running for hours being completely lost.
-Alarm level alteration: 5
+Alarm level alteration: 6
 Next event: The end
 
 

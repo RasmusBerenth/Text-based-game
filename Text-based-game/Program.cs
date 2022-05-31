@@ -57,7 +57,7 @@ namespace Text_based_game
             }
             Console.WriteLine();
         }
-        //A method which checks if the game is over.
+        //A method which checks if the game is over and gives the matching ending to HandleEnding.
         static Ending CheckGameOver(int alarmLevel, int confidence, List<string> storyline)
         {
             foreach (Ending ending in endings)
@@ -106,7 +106,7 @@ namespace Text_based_game
             return null;
 
         }
-        //A method which checks which ending the player got if the game is over.
+        //A method which outputs the ending received from CheckGameOver.
         static void HandleEnding(Ending ending)
         {
             Console.WriteLine(ending.Name);
@@ -146,7 +146,7 @@ namespace Text_based_game
         {
             Console.Clear();
             Console.CursorVisible = false;
-            Console.WindowWidth = 84;
+            Console.WindowWidth = 86;
             Console.WindowHeight = 27;
             Console.BufferWidth = Console.WindowWidth;
             Console.BufferHeight = Console.WindowHeight;
@@ -303,7 +303,7 @@ namespace Text_based_game
             }
 
 
-            //Display title screen with color
+            //Display title screen with color.
             foreach (string line in titleLines)
             {
                 MatchCollection colorMatches = Regex.Matches(line, "(?:\\*(\\d{1,2})\\*|^)(.*?)(?=\\*\\d{1,2}\\*|$)");
@@ -340,7 +340,7 @@ namespace Text_based_game
             //Game intro.
             Console.Clear();
             PrintScript("A lone thief has set up camp in a forest. Less than a day away has a dragon made its lair. The thief has gathered what confidence they could find and has made it this far...");
-            PrintScript("Will their confidence grow or fallter? Will the dragon spot them or will they go unseen...");
+            PrintScript("Will their confidence grow or falter? Will the dragon spot them or will they go unseen...");
             PrintScript("Only time will tell...");
             Console.WriteLine();
             PrintScript("Press enter to commence with the theft.");
@@ -350,13 +350,13 @@ namespace Text_based_game
 
             do
             {
-                //Alarm check
+                //Alarm check.
                 if (alarmLevel == 5 && !storyline.Contains("Dragon encounter"))
                 {
                     currentEvent = events[0];
                 }
 
-                //Check ending
+                //Check ending.
                 Ending ending = CheckGameOver(alarmLevel, confidence, storyline);
                 if (ending != null)
                 {
@@ -407,7 +407,7 @@ namespace Text_based_game
                             PrintScript("Try one of listed numbers.");
                         }
                     }
-                    //Cheat display to endings
+                    //Cheat display to endings.
                     else if (Regex.IsMatch(userInput, "e"))
                     {
                         Console.WriteLine("Enter ending number");
@@ -476,7 +476,7 @@ namespace Text_based_game
 
                 } while (true);
 
-                //Display choice
+                //Display choice.
                 Console.WriteLine();
                 PrintScript(selectedChoice.Narration);
                 Console.ReadKey(true);
@@ -506,7 +506,7 @@ namespace Text_based_game
 
                 storyline.Add(currentEvent.Name);
 
-                //Move to next event
+                //Move to the next event.
                 if (currentEvent.Name == "Knights camp")
                 {
                     if (inventory.Contains("Main entrance"))
