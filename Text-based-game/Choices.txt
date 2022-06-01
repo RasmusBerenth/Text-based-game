@@ -169,7 +169,7 @@ Alarm level alteration: +1
 Next event: Dragons' hoard
 
 Name: Attempt to sneak past the troll inbetween the stalagmites
-Narration: You attempt to sneak between the stalagmites in the cave you feel pretty good about it, that is until you slip and break off some of the smaller stalagmites. The troll snaps to attention luckily it seems to let its confidence falter and scurries back into its tunnel, at least you are braver than a troll you think. With bolstered confidence you carry on. You gain +1 confidence.
+Narration: You attempt to sneak between the stalagmites in the cave you feel pretty good about it, that is until you slip and break off some of the smaller stalagmites. The troll snaps to attention luckily it seems to let its confidence falter and scurries back into its tunnel, at least you are braver than a troll you think. With bolstered confidence you carry on. You gain 1 confidence.
 Confidence alteration: +1
 Next event: Dragons' hoard
 
@@ -288,14 +288,15 @@ Next event: Help knight
 
 
 Name: Climb over them
-Narration: You choose to climb over them anyway, they are made of stone they won't break that easily. As you climb on top of them and they seem to be holding fine however you quickly realize that they are a lot more slippery than you realized and as you struggle to keep your balance they collapse under you. Gues you should have trusted your first reaction. You lose 1 confidence and lose 1 alarm level.
+Narration: You choose to climb over them anyway, they are made of stone they won't break that easily. As you climb on top of them and they seem to be holding fine however you quickly realize that they are a lot more slippery than you realized and as you struggle to keep your balance they collapse under you. Gues you should have trusted your first reaction. You lose 1 confidence and gain 1 alarm level.
 Confidence alteration: -1
 Alarm level alteration: +1
 Next event: Dragons' hoard
 
 Name: Crawl under the stalagmites
-Narration: Best not to risk it. You find that they have been caught between other stalagmites which lift one end of them and make a crawl space. However your back scrapes against the stalcmites as you are crawling and while the noise probably doesn't travel far but to you it seems deafening, perhaps it is because of the anticipation in the air but it doesn't seem like a good sine. You lose 1 confidence.    
-Confidence alteration: -1
+Narration: Best not to risk it. You find that they have been caught between other stalagmites which lift one end of them and make a crawl space. However your back scrapes against the stalcmites as you are crawling and while the noise probably doesn't travel far but to you it seems deafening, while you make your way under the stalagmites does your bag get stuck pulling at it snaps one of the stalagmites and you just managed to get out alive as the stalagmite crashes down. Probably not a good sine but you feel confident since you got out without a scratch. You gain 1 confidence and gain 1 alarm level.    
+Confidence alteration: +1
+Alarm level alteration: +1
 Next event: Dragons' hoard
 
 Name: Climb around the fallen stalcmites
@@ -353,7 +354,7 @@ Next event: Empty hoard with knight
 
 Name: Let's go
 Narration: You leave without him he is a knight after all he can take care of himself. You lose 4 alarm levels.
-Alarm alteration: -4
+Alarm level alteration: -4
 Special item gained: Treasure
 Next event: Making an exit
 
@@ -366,7 +367,7 @@ Next event: The knight and the dragon
 
 Name: Let's go
 Narration: Whit not a thought in your mind, except getting home with the gold you start heading for the exit. You lose 4 alarm levels.
-Alarm alteration: -4
+Alarm level alteration: -4
 Special item gained: Treasure
 Next event: Making an exit
 
@@ -472,7 +473,7 @@ Special item gained: Treasure
 Next event: Making an exit
 
 Name: Steal the most valuable item in the treasure
-Narration: You are marveling at the hoard of treasure when you see it, a wooden chest decorated with gold leaves that seems to be filled with jewelry with the clearest gemstones you have ever seen. Unfortunately, it rests under one of the dragon talons but this is no time for cowards. You sneak forward carefully not to disturb the gold more than necessary but your shacking legs can't help but make a little noise. Coming up on the dragon's talon you slowly and gently lift it and move the chest away it slides down and makes a bit of noise but it is yours now you leave thinking how lucky you are the dragon didn't wake up. The thoughts doesn't seem to want to leave you alone. You lose 1 confidence and gain +2 alarm level.
+Narration: You are marveling at the hoard of treasure when you see it, a wooden chest decorated with gold leaves that seems to be filled with jewelry with the clearest gemstones you have ever seen. Unfortunately, it rests under one of the dragon talons but this is no time for cowards. You sneak forward carefully not to disturb the gold more than necessary but your shacking legs can't help but make a little noise. Coming up on the dragon's talon you slowly and gently lift it and move the chest away it slides down and makes a bit of noise but it is yours now you leave thinking how lucky you are the dragon didn't wake up. The thoughts doesn't seem to want to leave you alone. You lose 1 confidence and gain 2 alarm level.
 Confidence alteration: -1
 Alarm level alteration: +2
 Special item gained: Treasure
@@ -503,7 +504,7 @@ Alarm level alteration: -1
 Next event: Escape
 
 Name: Bribe the troll
-Narration: You have plenty of treasure sharing some to get out of might not be ideal but it is better than facing the dragon. So you walk up to the troll and take a handful of jewelry giving it to the troll and motioning for it to be quiet.
+Narration: You have plenty of treasure sharing some to get out of might not be ideal but it is better than facing the dragon. So you walk up to the troll and take a handful of jewelry giving it to the troll and motioning for it to be quiet. You lose 1 confidence.
 Confidence alteration: -1
 Next event: Escape
 

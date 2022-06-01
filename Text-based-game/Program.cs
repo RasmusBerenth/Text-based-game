@@ -112,7 +112,7 @@ namespace Text_based_game
             Console.WriteLine(ending.Name);
             PrintScript(ending.Narration);
         }
-        //Gets the next event.
+        //Set the next event.
         static Event GetEvent(string name)
         {
             Event result = events.Find(storyEvent => storyEvent.Name == name);
@@ -346,7 +346,7 @@ namespace Text_based_game
             PrintScript("Press enter to commence with the theft.");
             Console.ReadKey(true);
 
-            Event currentEvent = events[4];
+            Event currentEvent = events[7];
 
             do
             {
@@ -360,30 +360,52 @@ namespace Text_based_game
                 Ending ending = CheckGameOver(alarmLevel, confidence, storyline);
                 if (ending != null)
                 {
+                    Console.WriteLine();
                     HandleEnding(ending);
                     break;
                 }
 
-                //Clearing previous text and output UI.
+                //Clearing previous text and output the UI.
                 Console.Clear();
                 Console.WriteLine($"Confidence:{confidence} Alarm Level:{alarmLevel}\n");
                 PrintScript(currentEvent.Narration);
                 Console.WriteLine();
+
                 var possibleChoices = new List<Choice>();
+                var notPossibleChoices = new List<Choice>();
+
+                //Check which choices are possible and which ones are not
                 foreach (Choice choice in currentEvent.Choices)
                 {
                     if (IsChoicePossible(choice, confidence, storyline, inventory))
                     {
                         possibleChoices.Add(choice);
                     }
+                    else if (choice.Name == "I already have my treasure, time to leave")
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        notPossibleChoices.Add(choice);
+                    }
                 }
 
+                //Output choices that are possible
                 int counter = 1;
                 foreach (Choice choice in possibleChoices)
                 {
                     PrintScript($"{counter}. {choice.Name}");
                     counter++;
                 }
+
+                //Output choices that are not possible
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                foreach (Choice choice in notPossibleChoices)
+                {
+                    PrintScript("???. It seems like your confidence is lacking, or perhaps you are missing something?");
+                }
+                Console.ForegroundColor = ConsoleColor.White;
 
                 //Selects a choice based on the players input.
                 Choice selectedChoice;
@@ -542,7 +564,7 @@ namespace Text_based_game
                         }
                     }
 
-                    if (currentEvent.Name == "Empty hoard" || currentEvent.Name == "Empty hoard with knight")
+                    if (currentEvent.Name == "Empty hoard" && selectedChoice.Name == "Save the knight" || currentEvent.Name == "Empty hoard with knight" && selectedChoice.Name == "Save the knight")
                     {
                         alarmLevel = 5;
                         storyline.Add("Dragon encounter");

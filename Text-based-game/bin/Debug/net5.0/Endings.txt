@@ -7,7 +7,7 @@ Minimum alarm level: 6
 Event requirement: Help knight
 
 Name: Stolen treasure
-Narration: You eventually get captured by the trolls and your vision goes dark. When you wake up, you are laying in a ditch whit now treasure to be seen. You make your way home with less money than you started with.
+Narration: You eventually get captured by the trolls and your vision goes dark as you get hit over the head. When you wake up, you are laying in a ditch whit now treasure to be seen. You make your way home with less money than you started with.
 Maximum confidence: 
 Minimum confidence: 
 Maximum alarm level: 
