@@ -221,7 +221,6 @@ namespace Text_based_game
                     InitializeStringParameter(ref choice.EventRequirement, choiceInfoText, "Event requriement: ([^\\r]*)");
                     InitializeStringParameter(ref choice.NextEvent, choiceInfoText, "Next event: ([^\\r]*)");
 
-
                     //Adding choices into a list that goes to event class.
                     eventChoices.Add(choice);
                 }
@@ -307,7 +306,6 @@ namespace Text_based_game
             Console.WriteLine();
             PrintScript("Press enter to commence with the theft.");
             Console.ReadKey(true);
-
 
             do
             {
@@ -409,7 +407,7 @@ namespace Text_based_game
                         }
                         else
                         {
-                            PrintScript("Try one of listed numbers.");
+                            PrintScript("Try one of the listed numbers.");
                         }
                     }
                     //Cheat display to endings.

@@ -7,6 +7,12 @@ Narration: You run up and punch it, it dosen't seem to have an effect. You gain 
 Alarm level alteration: +1
 Next event: The end
 
+Name: Hide before it can spot you
+Narration: You quickly hide behind some stalagmites before the dragon can see you. Moving like a shadow on the wall you manage to outsmart the dragon, like a proper thief. You gain 1 confidence and lose 1 alarm level.
+Minimum confidence: 5
+Confidence alteration: +1
+Alarm level alteration: -1
+
 Name: Make a break for the exit
 Narration: You have your treasure and the exit isn't far. You start running towards the exit with the dragon nipping at your heels.
 Special item requirement: Treasure
