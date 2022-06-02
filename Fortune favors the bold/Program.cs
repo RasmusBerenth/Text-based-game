@@ -168,7 +168,35 @@ namespace Text_based_game
             string titleScreen = File.ReadAllText(titleScreenPath);
             string[] titleLines = titleScreen.Split("\r\n");
 
-            //Initializ choices and events.
+
+            void InitializeIntegerParameter(ref int parameter, string text, string regex)
+            {
+                Match info = Regex.Match(text, regex);
+                if (info.Success)
+                {
+                    parameter = Int32.Parse(info.Groups[1].Value);
+                }
+            }
+
+            void InitializeStringParameter(ref string parameter, string text, string regex)
+            {
+                Match info = Regex.Match(text, regex);
+                if (info.Success)
+                {
+                    parameter = info.Groups[1].Value;
+                }
+            }
+
+            void InitializeStringArrayParameter(ref string[] parameter, string text, string regex)
+            {
+                Match info = Regex.Match(text, regex);
+                if (info.Success)
+                {
+                    parameter = info.Groups[1].Value.Split(", ");
+                }
+            }
+
+            //Initialize choices and events.
             for (int eventIndex = 0; eventIndex < eventGroups.Length; eventIndex++)
             {
                 //List of choices in individual events.
@@ -185,50 +213,14 @@ namespace Text_based_game
                     choice.Name = choiceInfo.Groups[1].Value;
                     choice.Narration = choiceInfo.Groups[2].Value;
 
-                    Match confidenceInfo = Regex.Match(choiceInfoText, "Confidence alteration: ([^\\r]*)");
-                    if (confidenceInfo.Success)
-                    {
-                        int intConfidenceAlteration = Int32.Parse(confidenceInfo.Groups[1].Value);
-                        choice.ConfidenceAlteration = intConfidenceAlteration;
-                    }
+                    InitializeIntegerParameter(ref choice.ConfidenceAlteration, choiceInfoText, "Confidence alteration: ([^\\r]*)");
+                    InitializeIntegerParameter(ref choice.AlarmLevelAlteration, choiceInfoText, "Alarm level alteration: ([^\\r]*)");
+                    InitializeIntegerParameter(ref choice.MinimumConfidence, choiceInfoText, "Minimum confidence: ([^\\r]*)");
+                    InitializeStringParameter(ref choice.SpecialItemRequirement, choiceInfoText, "Special item requirement: ([^\\r]*)");
+                    InitializeStringParameter(ref choice.SpecialItemGained, choiceInfoText, "Special item gained: ([^\\r]*)");
+                    InitializeStringParameter(ref choice.EventRequirement, choiceInfoText, "Event requriement: ([^\\r]*)");
+                    InitializeStringParameter(ref choice.NextEvent, choiceInfoText, "Next event: ([^\\r]*)");
 
-                    Match alarmInfo = Regex.Match(choiceInfoText, "Alarm level alteration: ([^\\r]*)");
-                    if (alarmInfo.Success)
-                    {
-                        int intAlarmLevelAlteration = Int32.Parse(alarmInfo.Groups[1].Value);
-                        choice.AlarmLevelAlteration = intAlarmLevelAlteration;
-                    }
-
-                    Match minimumConfidenceInfo = Regex.Match(choiceInfoText, "Minimum confidence: ([^\\r]*)");
-                    if (minimumConfidenceInfo.Success)
-                    {
-                        int intMinimumConfidence = Int32.Parse(minimumConfidenceInfo.Groups[1].Value);
-                        choice.MinimumConfidence = intMinimumConfidence;
-                    }
-
-                    Match specialItemRequirementInfo = Regex.Match(choiceInfoText, "Special item requirement: ([^\\r]*)");
-                    if (specialItemRequirementInfo.Success)
-                    {
-                        choice.SpecialItemRequirement = specialItemRequirementInfo.Groups[1].Value;
-                    }
-
-                    Match specialItemGainedInfo = Regex.Match(choiceInfoText, "Special item gained: ([^\\r]*)");
-                    if (specialItemGainedInfo.Success)
-                    {
-                        choice.SpecialItemGained = specialItemGainedInfo.Groups[1].Value;
-                    }
-
-                    Match eventRequirementInfo = Regex.Match(choiceInfoText, "Event requriement: ([^\\r]*)");
-                    if (eventRequirementInfo.Success)
-                    {
-                        choice.EventRequirement = eventRequirementInfo.Groups[1].Value;
-                    }
-
-                    Match nextEventInfo = Regex.Match(choiceInfoText, "Next event: ([^\\r]*)");
-                    if (nextEventInfo.Success)
-                    {
-                        choice.NextEvent = nextEventInfo.Groups[1].Value;
-                    }
 
                     //Adding choices into a list that goes to event class.
                     eventChoices.Add(choice);
@@ -250,53 +242,13 @@ namespace Text_based_game
             {
                 Ending ending = new Ending();
 
-                Match endNameInfo = Regex.Match(endGroup, "Name: ([^\\r]+)");
-                if (endNameInfo.Success)
-                {
-                    ending.Name = endNameInfo.Groups[1].Value;
-                }
-
-                Match endNarrationInfo = Regex.Match(endGroup, "Narration: ([^\\r]+)");
-                if (endNarrationInfo.Success)
-                {
-                    ending.Narration = endNarrationInfo.Groups[1].Value;
-                }
-
-                Match endEventRequirementInfo = Regex.Match(endGroup, "Event requirement: ([^\\r]+)");
-                if (endEventRequirementInfo.Success)
-                {
-                    string[] eventRequitements = endEventRequirementInfo.Groups[1].Value.Split(", ");
-                    ending.EventRequirements = eventRequitements;
-                }
-
-                Match endMinConfidenceInfo = Regex.Match(endGroup, "Minimum confidence: ([^\\r]+)");
-                if (endMinConfidenceInfo.Success)
-                {
-                    int intEndMinConfidenceInfo = Int32.Parse(endMinConfidenceInfo.Groups[1].Value);
-                    ending.MinimumConfidence = intEndMinConfidenceInfo;
-                }
-
-                Match endMaxConfidenceInfo = Regex.Match(endGroup, "Maximum confidence: ([^\\r]+)");
-                if (endMaxConfidenceInfo.Success)
-                {
-                    int intEndMaxConfidenceInfo = Int32.Parse(endMaxConfidenceInfo.Groups[1].Value);
-                    ending.MaximumConfidence = intEndMaxConfidenceInfo;
-                }
-
-                Match endMinAlarmLevelInfo = Regex.Match(endGroup, "Minimum alarm level: ([^\\r]+)");
-                if (endMinAlarmLevelInfo.Success)
-                {
-                    int intEndMinAlarmLevelInfo = Int32.Parse(endMinAlarmLevelInfo.Groups[1].Value);
-                    ending.MinimumAlarmLevel = intEndMinAlarmLevelInfo;
-                }
-
-                Match endMaxAlarmLevelInfo = Regex.Match(endGroup, "Maximum alarm level: ([^\\r]+)");
-                if (endMaxAlarmLevelInfo.Success)
-                {
-                    int intEndMaxAlarmLevelInfo = Int32.Parse(endMaxAlarmLevelInfo.Groups[1].Value);
-                    ending.MaximumAlarmLevel = intEndMaxAlarmLevelInfo;
-                }
-
+                InitializeStringParameter(ref ending.Name, endGroup, "Name: ([^\\r]+)");
+                InitializeStringParameter(ref ending.Narration, endGroup, "Narration: ([^\\r]+)");
+                InitializeStringArrayParameter(ref ending.EventRequirements, endGroup, "Event requirement: ([^\\r]+)");
+                InitializeIntegerParameter(ref ending.MinimumConfidence, endGroup, "Minimum confidence: ([^\\r]+)");
+                InitializeIntegerParameter(ref ending.MaximumConfidence, endGroup, "Maximum confidence: ([^\\r]+)");
+                InitializeIntegerParameter(ref ending.MinimumAlarmLevel, endGroup, "Minimum alarm level: ([^\\r]+)");
+                InitializeIntegerParameter(ref ending.MaximumAlarmLevel, endGroup, "Maximum alarm level: ([^\\r]+)");
 
                 endings.Add(ending);
             }
@@ -326,8 +278,19 @@ namespace Text_based_game
             Console.ForegroundColor = ConsoleColor.White;
 
             //Gameplay
-            int confidence = 1;
-            int alarmLevel = 0;
+            int confidence;
+            int alarmLevel;
+            Event currentEvent;
+
+            void SetStartingState()
+            {
+                confidence = 1;
+                alarmLevel = 0;
+                currentEvent = events[4];
+            }
+
+            SetStartingState();
+
             string userInput;
             int intUserInput;
 
@@ -345,7 +308,6 @@ namespace Text_based_game
             PrintScript("Press enter to commence with the theft.");
             Console.ReadKey(true);
 
-            Event currentEvent = events[4];
 
             do
             {
@@ -365,19 +327,25 @@ namespace Text_based_game
                     Console.WriteLine(@"Do you want to play again? (Press ""r"" to replay or ""q"" to quit the game.");
 
                     //Letting the player chose whether to replay the game or quit.
-                    ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-                    userInput = keyInfo.KeyChar.ToString();
-                    if (userInput == "q")
+                    do
                     {
-                        break;
-                    }
+                        ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                        userInput = keyInfo.KeyChar.ToString();
 
-                    if (userInput == "r")
-                    {
-                        currentEvent = events[4];
-                        confidence = 1;
-                        alarmLevel = 0;
-                    }
+                        if (userInput == "q")
+                        {
+                            return;
+                        }
+
+                        if (userInput == "r")
+                        {
+                            SetStartingState();
+                            storyline.Clear();
+                            inventory.Clear();
+                            break;
+                        }
+
+                    } while (true);
                 }
 
                 //Clearing previous text and output the UI.
@@ -395,10 +363,6 @@ namespace Text_based_game
                     if (IsChoicePossible(choice, confidence, storyline, inventory))
                     {
                         possibleChoices.Add(choice);
-                    }
-                    else if (choice.Name == "I already have my treasure, time to leave")
-                    {
-                        continue;
                     }
                     else
                     {
@@ -418,7 +382,8 @@ namespace Text_based_game
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 foreach (Choice choice in notPossibleChoices)
                 {
-                    PrintScript("???. It seems like your confidence is lacking, or perhaps you are missing something?");
+                    PrintScript($"{counter}. ???");
+                    counter++;
                 }
                 Console.ForegroundColor = ConsoleColor.White;
 
@@ -432,14 +397,17 @@ namespace Text_based_game
 
                     if (Regex.IsMatch(userInput, "\\d"))
                     {
-                        try
+                        intUserInput = int.Parse(userInput);
+                        if (intUserInput > 0 && intUserInput <= possibleChoices.Count)
                         {
-                            intUserInput = int.Parse(userInput);
                             selectedChoice = possibleChoices[intUserInput - 1];
-
                             break;
                         }
-                        catch (ArgumentOutOfRangeException)
+                        else if (intUserInput > possibleChoices.Count && intUserInput <= currentEvent.Choices.Count)
+                        {
+                            PrintScript("It seems like your confidence is lacking, or perhaps you are missing something?");
+                        }
+                        else
                         {
                             PrintScript("Try one of listed numbers.");
                         }
@@ -541,6 +509,7 @@ namespace Text_based_game
                     inventory.Add(selectedChoice.SpecialItemGained);
                 }
 
+                //Record current storyline.
                 storyline.Add(currentEvent.Name);
 
                 //Move to the next event.
