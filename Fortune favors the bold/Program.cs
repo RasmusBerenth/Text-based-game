@@ -237,7 +237,7 @@ namespace Text_based_game
                 events.Add(newEvent);
             }
 
-            //Initializ endings.
+            //Initialize endings.
             foreach (string endGroup in endGroups)
             {
                 Ending ending = new Ending();
