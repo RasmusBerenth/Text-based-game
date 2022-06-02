@@ -90,7 +90,6 @@ namespace Text_based_game
                         if (!storyline.Contains(eventRequirement))
                         {
                             eventRequirementsAreMet = false;
-                            break;
                         }
                     }
 
@@ -346,7 +345,7 @@ namespace Text_based_game
             PrintScript("Press enter to commence with the theft.");
             Console.ReadKey(true);
 
-            Event currentEvent = events[7];
+            Event currentEvent = events[4];
 
             do
             {
@@ -362,7 +361,23 @@ namespace Text_based_game
                 {
                     Console.WriteLine();
                     HandleEnding(ending);
-                    break;
+                    Console.WriteLine();
+                    Console.WriteLine(@"Do you want to play again? (Press ""r"" to replay or ""q"" to quit the game.");
+
+                    //Letting the player chose whether to replay the game or quit.
+                    ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                    userInput = keyInfo.KeyChar.ToString();
+                    if (userInput == "q")
+                    {
+                        break;
+                    }
+
+                    if (userInput == "r")
+                    {
+                        currentEvent = events[4];
+                        confidence = 1;
+                        alarmLevel = 0;
+                    }
                 }
 
                 //Clearing previous text and output the UI.
