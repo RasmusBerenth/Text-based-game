@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rasmu\\OneDrive\\Dokument\\GitHub\\Text-based-game\\Text-based-game\\Text-based-game.csproj",
+      "projectUniqueName": "C:\\Users\\rasmu\\OneDrive\\Dokument\\GitHub\\Text-based-game\\Fortune favors the bold\\Text-based-game.csproj",
       "projectName": "Text-based-game",
-      "projectPath": "C:\\Users\\rasmu\\OneDrive\\Dokument\\GitHub\\Text-based-game\\Text-based-game\\Text-based-game.csproj",
+      "projectPath": "C:\\Users\\rasmu\\OneDrive\\Dokument\\GitHub\\Text-based-game\\Fortune favors the bold\\Text-based-game.csproj",
       "packagesPath": "C:\\Users\\rasmu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rasmu\\OneDrive\\Dokument\\GitHub\\Text-based-game\\Text-based-game\\obj\\",
+      "outputPath": "C:\\Users\\rasmu\\OneDrive\\Dokument\\GitHub\\Text-based-game\\Fortune favors the bold\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rasmu\\AppData\\Roaming\\NuGet\\NuGet.Config",

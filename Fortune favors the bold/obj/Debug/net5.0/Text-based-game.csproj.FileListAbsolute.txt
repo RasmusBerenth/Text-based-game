@@ -1,0 +1,60 @@
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Choices.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Endings.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Events.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Text-based-game.exe
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Text-based-game.deps.json
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Text-based-game.runtimeconfig.json
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Text-based-game.runtimeconfig.dev.json
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Text-based-game.pdb
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\Text-based-game.csproj.AssemblyReference.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\Text-based-game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\Text-based-game.AssemblyInfoInputs.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\Text-based-game.AssemblyInfo.cs
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\Text-based-game.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\refint\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\Text-based-game.pdb
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\Text-based-game.genruntimeconfig.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\obj\Debug\net5.0\ref\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Text-based-game\bin\Debug\net5.0\Fortune favor the bold title screen.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\bin\Debug\net5.0\Choices.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\bin\Debug\net5.0\Endings.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\bin\Debug\net5.0\Events.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\bin\Debug\net5.0\Fortune favor the bold title screen.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\bin\Debug\net5.0\Text-based-game.exe
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\bin\Debug\net5.0\Text-based-game.deps.json
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\bin\Debug\net5.0\Text-based-game.runtimeconfig.json
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\bin\Debug\net5.0\Text-based-game.runtimeconfig.dev.json
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\bin\Debug\net5.0\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\bin\Debug\net5.0\Text-based-game.pdb
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\obj\Debug\net5.0\Text-based-game.csproj.AssemblyReference.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\obj\Debug\net5.0\Text-based-game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\obj\Debug\net5.0\Text-based-game.AssemblyInfoInputs.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\obj\Debug\net5.0\Text-based-game.AssemblyInfo.cs
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\obj\Debug\net5.0\Text-based-game.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\obj\Debug\net5.0\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\obj\Debug\net5.0\refint\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\obj\Debug\net5.0\Text-based-game.pdb
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\obj\Debug\net5.0\Text-based-game.genruntimeconfig.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favor the bold\obj\Debug\net5.0\ref\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\net5.0\Choices.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\net5.0\Endings.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\net5.0\Events.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\net5.0\Fortune favor the bold title screen.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\net5.0\Text-based-game.exe
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\net5.0\Text-based-game.deps.json
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\net5.0\Text-based-game.runtimeconfig.json
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\net5.0\Text-based-game.runtimeconfig.dev.json
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\net5.0\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\net5.0\Text-based-game.pdb
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\net5.0\Text-based-game.csproj.AssemblyReference.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\net5.0\Text-based-game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\net5.0\Text-based-game.AssemblyInfoInputs.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\net5.0\Text-based-game.AssemblyInfo.cs
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\net5.0\Text-based-game.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\net5.0\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\net5.0\refint\Text-based-game.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\net5.0\Text-based-game.pdb
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\net5.0\Text-based-game.genruntimeconfig.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\net5.0\ref\Text-based-game.dll
