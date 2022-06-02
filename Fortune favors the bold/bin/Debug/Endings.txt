@@ -1,0 +1,95 @@
+Name: Die a hero
+Narration: The dragon has eaten you, however, your sacrifice has not been in vain as the knight, sir Arnold, got out alive and will sing your praises for saving him from this ordeal.
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 6
+Event requirement: Help knight
+
+Name: Stolen treasure
+Narration: You eventually get captured by the trolls and your vision goes dark as you get hit over the head. When you wake up, you are laying in a ditch whit now treasure to be seen. You make your way home with less money than you started with.
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 6
+Event requirement: Escaping the trolls
+
+Name: Dragon fodder
+Narration: You have been eaten by the dragon. Guess that is what happens when you risk it all and loses.
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 6
+Event requirement: 
+
+Name: Helper and theif
+Narration: Shared treasure is better than non, right? Since you did save sir Arnold, maybe you two will become friends one day. Only time will tell...
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 
+Event requirement: Help knight, Escape via secret door
+
+Name: Dragonslayer
+Narration: You have slain the dragon! The entire treasure is yours. Luckily sir Arnold seems happy with you having taken the treasure as long as he gets all the credit for slaying the dragon, so everything seems to have worked out. As the years go by you find yourself less and less willing to part with the treasure and on occasion dark scales in your bed after nights when you have felt particularly itchy... 
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 
+Event requirement: Help knight, Fight dragon
+
+Name: Live long enough the see yourself become the villain
+Narration: So you got the treasure... Just so that you know the knight is definitely dead, if you two hadn't met he would have been alive. I mean the dragon is the one who killed him but only because you left him. But who cares, right? You are rich now feel free to spend your ill-gotten gains on anything you wish, I sincerely hope it was worth it...
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 
+Event requirement: Help knight, Escape
+
+Name: Narrow escape
+Narration: So it turns out you can't trust trolls, oh well you got most of the stolen treasure left so you'll be fine you are still at least half as rich as those trolls, and you are not exactly in a position to judge them for trying to get in on the treasure.
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 
+Event requirement: Escaping the trolls
+
+Name: How am I alive?
+Narration: Are you still alive? You have seen your life flash before your eyes more in this day than anyone should in their entire life... Whatever, you got the treasure and thats what matters know you can retire and live peacefully, not to offend but you clearly aren't cut out for this.
+Maximum confidence: 0
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 5
+Event requirement: Escape
+
+Name: Flying by the seat of your pants
+Narration: You managed to get out alive and probably almost died on more than one occasion however your confidence never faltered and the treasure is yours. Maybe we should do this again sometime...
+Maximum confidence: 
+Minimum confidence: 5
+Maximum alarm level: 
+Minimum alarm level: 5
+Event requirement: Escape
+
+Name: Lucky break
+Narration: You have successfully retrieved the treasure. There were some close calls... How are you kidding? You got lucky you did as well as you did. Regardless of this, the treasure is yours.
+Maximum confidence: 0
+Minimum confidence: 
+Maximum alarm level: 0
+Minimum alarm level: 
+Event requirement: Escape
+
+Name: A cunning thief
+Narration: You have successfully made it through the dragons' lair. Your cunning made your confidence grow and got your treasure without gaining any unwanted attention. Truly you are a master of your craft.
+Maximum confidence: 
+Minimum confidence: 5
+Maximum alarm level: 0
+Minimum alarm level: 
+Event requirement: Escape
+
+Name: Rags to riches
+Narration: You got the treasure, you rich know anything you want can be yours. Sure you stumbled and you weren't always fully confident in your decisions. But forget about all that because you just went from a poor thief form nowhere to being rich enough to buy your own fully furnished and staffed castle, or anything else you might want. Long live the dragons and their hoards of gold, and the thieves bold enough to steal from them!
+Maximum confidence: 
+Minimum confidence: 
+Maximum alarm level: 
+Minimum alarm level: 
+Event requirement: Escape

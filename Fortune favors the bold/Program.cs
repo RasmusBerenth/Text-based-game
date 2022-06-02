@@ -1,7 +1,10 @@
-﻿using System;
+﻿using DotNetConsoleJS;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using Console = DotNetConsoleJS.Console;
 
 namespace Text_based_game
 {
@@ -40,7 +43,7 @@ namespace Text_based_game
 
         static void PrintScript(string text)
         {
-            string[] words = text.Split(" ");
+            string[] words = text.Split(new[] { " " }, StringSplitOptions.None);
             foreach (string word in words)
             {
                 int totalWidth = Console.WindowWidth - 4;
@@ -141,7 +144,7 @@ namespace Text_based_game
 
             return true;
         }
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.Clear();
             Console.CursorVisible = false;
@@ -154,19 +157,19 @@ namespace Text_based_game
             //Reading files and then splitting them when needed.
             string eventsPath = "Events.txt";
             string eventsText = File.ReadAllText(eventsPath);
-            string[] eventGroups = eventsText.Split("\r\n\r\n");
+            string[] eventGroups = eventsText.Split(new[] { "\r\n\r\n" }, StringSplitOptions.None);
 
             string choicesPath = "Choices.txt";
             string choicesText = File.ReadAllText(choicesPath);
-            string[] choiceGroups = choicesText.Split("\r\n\r\n\r\n");
+            string[] choiceGroups = choicesText.Split(new[] { "\r\n\r\n\r\n" }, StringSplitOptions.None);
 
             string endPath = "Endings.txt";
             string endText = File.ReadAllText(endPath);
-            string[] endGroups = endText.Split("\r\n\r\n");
+            string[] endGroups = endText.Split(new[] { "\r\n\r\n" }, StringSplitOptions.None);
 
             string titleScreenPath = "Fortune favor the bold title screen.txt";
             string titleScreen = File.ReadAllText(titleScreenPath);
-            string[] titleLines = titleScreen.Split("\r\n");
+            string[] titleLines = titleScreen.Split(new[] { "\r\n" }, StringSplitOptions.None);
 
 
             void InitializeIntegerParameter(ref int parameter, string text, string regex)
@@ -192,7 +195,7 @@ namespace Text_based_game
                 Match info = Regex.Match(text, regex);
                 if (info.Success)
                 {
-                    parameter = info.Groups[1].Value.Split(", ");
+                    parameter = info.Groups[1].Value.Split(new[] { ", " }, StringSplitOptions.None);
                 }
             }
 
@@ -201,7 +204,7 @@ namespace Text_based_game
             {
                 //List of choices in individual events.
                 var eventChoices = new List<Choice>();
-                string[] choicesPerEvent = choiceGroups[eventIndex].Split("\r\n\r\n");
+                string[] choicesPerEvent = choiceGroups[eventIndex].Split(new[] { "\r\n\r\n" }, StringSplitOptions.None);
 
                 //Using regex to find individual items in the choice file.
                 foreach (string choiceInfoText in choicesPerEvent)
@@ -272,7 +275,7 @@ namespace Text_based_game
                 }
                 Console.WriteLine();
             }
-            Console.ReadKey();
+            await Console.ReadKey();
 
             Console.ForegroundColor = ConsoleColor.White;
 
@@ -305,7 +308,7 @@ namespace Text_based_game
             PrintScript("Only time will tell...");
             Console.WriteLine();
             PrintScript("Press enter to commence with the theft.");
-            Console.ReadKey(true);
+            await Console.ReadKey(true);
 
             do
             {
@@ -327,7 +330,7 @@ namespace Text_based_game
                     //Letting the player chose whether to replay the game or quit.
                     do
                     {
-                        ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                        ConsoleKeyInfo keyInfo = await Console.ReadKey(true);
                         userInput = keyInfo.KeyChar.ToString();
 
                         if (userInput == "q")
@@ -390,7 +393,7 @@ namespace Text_based_game
 
                 do
                 {
-                    ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                    ConsoleKeyInfo keyInfo = await Console.ReadKey(true);
                     userInput = keyInfo.KeyChar.ToString();
 
                     if (Regex.IsMatch(userInput, "\\d"))
@@ -417,7 +420,7 @@ namespace Text_based_game
 
                         do
                         {
-                            string cheat = Console.ReadLine();
+                            string cheat = await Console.ReadLine();
                             if (cheat == "1")
                             {
                                 alarmLevel = 6;
@@ -482,7 +485,7 @@ namespace Text_based_game
                 //Display choice.
                 Console.WriteLine();
                 PrintScript(selectedChoice.Narration);
-                Console.ReadKey(true);
+                await Console.ReadKey(true);
 
                 confidence += selectedChoice.ConfidenceAlteration;
                 if (confidence < 0)

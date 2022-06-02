@@ -1,0 +1,27 @@
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\bin\Debug\Text-based-game-web.dll
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\bin\Debug\Text-based-game-web.pdb
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\bin\Debug\Bridge.dll
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\bin\Debug\Bridge.xml
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\obj\Debug\Text-based-game-web.csproj.AssemblyReference.cache
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\obj\Debug\Text-based-game-web.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\obj\Debug\Text-based-game-web.csproj.CopyComplete
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\obj\Debug\Text-based-game-web.dll
+C:\Users\rasmu\OneDrive\Skrivbord\Text-based-game-web\obj\Debug\Text-based-game-web.pdb
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\Text-based-game-web.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\Text-based-game-web.pdb
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\Bridge.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\Bridge.xml
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\Text-based-game-web.csproj.AssemblyReference.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\Text-based-game-web.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\Text-based-game-web.csproj.CopyComplete
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\Text-based-game-web.dll
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\obj\Debug\Text-based-game-web.pdb
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\Choices.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\Endings.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\Events.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\Fortune favor the bold title screen.txt
+C:\Users\rasmu\OneDrive\Dokument\GitHub\Text-based-game\Fortune favors the bold\bin\Debug\DotNetConsoleJS.dll
