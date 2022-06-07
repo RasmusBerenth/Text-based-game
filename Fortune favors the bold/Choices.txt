@@ -308,7 +308,7 @@ Next event: Dragons' hoard
 Name: Climb around the fallen stalcmites
 Narration: You gather your confidence and decide to take a grip around some of the slacmites by the wall and walk on the wall. It is hard work but it seems to work surprisingly well. You surprise yourself sometimes. You gain 1 confidence.
 Minimum confidence: 4
-Confidence alateration: +1
+Confidence alteration: +1
 Next event: Dragons' hoard
 
 
@@ -327,7 +327,7 @@ Next event: Sir Arnold the knight
 Name: Not your problem
 Narration: This isn't your problem and whatever is behind that boulder isn't coming out any time soon. You gain 1 confidence.
 Confidence alteration: +1
-Next even: Blocked path
+Next event: Blocked path
 
 
 Name: Tell him that you are a knight here to help him
